@@ -1,0 +1,3 @@
+displayName = Blowpipe Class
+author = Nate76
+version = 0.1

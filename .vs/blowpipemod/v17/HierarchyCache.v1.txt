@@ -1,0 +1,372 @@
+﻿++Solution 'blowpipemod' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:blowpipemod.sln
+++blowpipemod
+i:{00000000-0000-0000-0000-000000000000}:blowpipemod
+++Dependencies
+i:{021ada98-d22f-496b-8127-30270ec8c621}:>2025
+++Analyzers
+i:{021ada98-d22f-496b-8127-30270ec8c621}:analyzers
+++Assemblies
+i:{021ada98-d22f-496b-8127-30270ec8c621}:assemblies
+++Frameworks
+i:{021ada98-d22f-496b-8127-30270ec8c621}:frameworks
+++Packages
+i:{021ada98-d22f-496b-8127-30270ec8c621}:packages
+++Properties
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\properties\
+++Common
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\common\
+++GlobalItems
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\common\globalitems\
+++BlowpipeGlobalItem.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\common\globalitems\blowpipeglobalitem.cs
+++SeedGlobalItem.cs
+++GlobalTiles
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\common\globaltiles\
+++Content
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\
+++Items
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\
+++Accessories
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\accessories\
+++SeedStopper.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\accessories\seedstopper.cs
+++SeedStopper.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\accessories\seedstopper.png
+++Ammo
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\ammo\
+++CursedSeed.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\ammo\cursedseed.cs
+++CursedSeed.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\ammo\cursedseed.png
+++HardenedSeed.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\ammo\hardenedseed.cs
+++HardenedSeed.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\ammo\hardenedseed.png
+++IchorSeed.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\ammo\ichorseed.cs
+++IchorSeed.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\ammo\ichorseed.png
+++SlimeySeed.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\ammo\slimeyseed.cs
+++SlimeySeed.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\ammo\slimeyseed.png
+++Armor
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\armor\
+++Weapons
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\
+++AdamantiteBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\adamantiteblowpipe.cs
+++AdamantiteBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\adamantiteblowpipe.png
+++CrimtaneBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\crimtaneblowpipe.cs
+++CrimtaneBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\crimtaneblowpipe.png
+++CrystalBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\crystalblowpipe.cs
+++CrystalBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\crystalblowpipe.png
+++DemoniteBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\demoniteblowpipe.cs
+++DemoniteBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\demoniteblowpipe.png
+++GoldBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\goldblowpipe.cs
+++GoldBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\goldblowpipe.png
+++HellstoneBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\hellstoneblowpipe.cs
+++HellstoneBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\hellstoneblowpipe.png
+++IceBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\iceblowpipe.cs
+++IceBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\iceblowpipe.png
+++IronBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\ironblowpipe.cs
+++IronBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\ironblowpipe.png
+++JungleBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\jungleblowpipe.cs
+++JungleBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\jungleblowpipe.png
+++LeadBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\leadblowpipe.cs
+++LeadBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\leadblowpipe.png
+++MythrilBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\mythrilblowpipe.cs
+++MythrilBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\mythrilblowpipe.png
+++NecroBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\necroblowpipe.cs
+++NecroBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\necroblowpipe.png
+++OrichalcumBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\orichalcumblowpipe.cs
+++OrichalcumBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\orichalcumblowpipe.png
+++PlatinumBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\platinumblowpipe.cs
+++PlatinumBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\platinumblowpipe.png
+++SilverBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\silverblowpipe.cs
+++SilverBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\silverblowpipe.png
+++TitaniumBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\titaniumblowpipe.cs
+++TitaniumBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\titaniumblowpipe.png
+++TungstenBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\tungstenblowpipe.cs
+++TungstenBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\tungstenblowpipe.png
+++VineyBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\vineyblowpipe.cs
+++VineyBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\vineyblowpipe.png
+++VortexBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\vortexblowpipe.cs
+++VortexBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\vortexblowpipe.png
+++ZenithBlowpipe.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\zenithblowpipe.cs
+++ZenithBlowpipe.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\weapons\zenithblowpipe.png
+++Projectiles
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\
+++CrystalBlowpipe
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crystalblowpipe\
+++CrystalBlowpipeFallingBallProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crystalblowpipe\crystalblowpipefallingballprojectile.cs
+++CrystalBlowpipeFallingBallProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crystalblowpipe\crystalblowpipefallingballprojectile.png
+++CrystalBlowpipeFallingLargeProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crystalblowpipe\crystalblowpipefallinglargeprojectile.cs
+++CrystalBlowpipeFallingLargeProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crystalblowpipe\crystalblowpipefallinglargeprojectile.png
+++CrystalBlowpipeFallingSmallProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crystalblowpipe\crystalblowpipefallingsmallprojectile.cs
+++CrystalBlowpipeFallingSmallProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crystalblowpipe\crystalblowpipefallingsmallprojectile.png
+++CrystalBlowpipeHomingProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crystalblowpipe\crystalblowpipehomingprojectile.cs
+++CrystalBlowpipeHomingProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crystalblowpipe\crystalblowpipehomingprojectile.png
+++VineyBlowpipe
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\
+++VineyBlowpipeBallProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipeballprojectile.cs
+++VineyBlowpipeBallProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipeballprojectile.png
+++VineyBlowpipeBallSpawnedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipeballspawnedprojectile.cs
+++VineyBlowpipeBallSpawnedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipeballspawnedprojectile.png
+++VineyBlowpipeHomingProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipehomingprojectile.cs
+++VineyBlowpipeHomingProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipehomingprojectile.png
+++VineyBlowpipePlanteraProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipeplanteraprojectile.cs
+++VineyBlowpipePlanteraProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipeplanteraprojectile.png
+++VineyBlowpipePlanteraSpawnedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipeplanteraspawnedprojectile.cs
+++VineyBlowpipePlanteraSpawnedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipeplanteraspawnedprojectile.png
+++VineyBlowpipeSpinProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipespinprojectile.cs
+++VineyBlowpipeSpinProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipespinprojectile.png
+++VineyBlowpipeSpinSpawnedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipespinspawnedprojectile.cs
+++VineyBlowpipeSpinSpawnedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipespinspawnedprojectile.png
+++VineyBlowpipeVenomProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipevenomprojectile.cs
+++VineyBlowpipeVenomProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vineyblowpipe\vineyblowpipevenomprojectile.png
+++VortexBlowpipe
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vortexblowpipe\
+++CrimtaneBlowpipeProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crimtaneblowpipeprojectile.cs
+++CrimtaneBlowpipeProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\crimtaneblowpipeprojectile.png
+++CursedSeedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\cursedseedprojectile.cs
+++CursedSeedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\cursedseedprojectile.png
+++DemoniteBlowpipeProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\demoniteblowpipeprojectile.cs
+++DemoniteBlowpipeProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\demoniteblowpipeprojectile.png
+++FragileSeedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\fragileseedprojectile.cs
+++FragileSeedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\fragileseedprojectile.png
+++FragileSeedSegment.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\fragileseedsegment.cs
+++FragileSeedSegment.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\fragileseedsegment.png
+++HardenedSeedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\hardenedseedprojectile.cs
+++HardenedSeedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\hardenedseedprojectile.png
+++HellstoneSeedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\hellstoneseedprojectile.cs
+++HellstoneSeedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\hellstoneseedprojectile.png
+++IceSeedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\iceseedprojectile.cs
+++IceSeedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\iceseedprojectile.png
+++IchorSeedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\ichorseedprojectile.cs
+++IchorSeedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\ichorseedprojectile.png
+++JungleOrb.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\jungleorb.cs
+++JungleOrb.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\jungleorb.png
+++SlimeySeedProjectile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\slimeyseedprojectile.cs
+++SlimeySeedProjectile.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\slimeyseedprojectile.png
+++blowpipemod.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\blowpipemod.cs
+++BlowpipePlayer.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\blowpipeplayer.cs
+++build.txt
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\build.txt
+++description.txt
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\description.txt
+++icon.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\icon.png
+++todo.txt
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\todo.txt
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++System.Text.Json.SourceGeneration
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.3\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++tModLoader.CodeAssist
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\.nuget\packages\tmodloader.codeassist\0.1.5\analyzers\dotnet\cs\tmodloader.codeassist.dll
+++Basic.Reference.Assemblies.Net60
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\basic.reference.assemblies.net60\1.2.4\lib\netstandard2.0\basic.reference.assemblies.net60.dll
+++CsvHelper
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\csvhelper\2.0.0.0\csvhelper.dll
+++FNA
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\fna\1.0.0\fna.dll
+++Hjson
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\hjson\3.0.0\lib\netstandard1.3\hjson.dll
+++Humanizer
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\humanizer.core\2.2.0\lib\netstandard1.0\humanizer.dll
+++Ionic.Zip.Reduced
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\ionic.zip.reduced\1.9.1.8\ionic.zip.reduced.dll
+++log4net
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\log4net\2.0.8.0\log4net.dll
+++Microsoft.Bcl.AsyncInterfaces
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\microsoft.bcl.asyncinterfaces\6.0.0\lib\netstandard2.1\microsoft.bcl.asyncinterfaces.dll
+++Microsoft.Build.Locator
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\microsoft.build.locator\1.4.1\lib\netcoreapp2.0\microsoft.build.locator.dll
+++Microsoft.CodeAnalysis
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\microsoft.codeanalysis.common\4.2.0\lib\netcoreapp3.1\microsoft.codeanalysis.dll
+++Microsoft.CodeAnalysis.CSharp
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\microsoft.codeanalysis.csharp\4.2.0\lib\netcoreapp3.1\microsoft.codeanalysis.csharp.dll
+++Microsoft.CodeAnalysis.CSharp.Workspaces
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\microsoft.codeanalysis.csharp.workspaces\4.2.0\lib\netcoreapp3.1\microsoft.codeanalysis.csharp.workspaces.dll
+++Microsoft.CodeAnalysis.FlowAnalysis.Utilities
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\microsoft.codeanalysis.flowanalysis.utilities\2.9.6\lib\netstandard1.3\microsoft.codeanalysis.flowanalysis.utilities.dll
+++Microsoft.CodeAnalysis.Workspaces
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\microsoft.codeanalysis.workspaces.common\4.2.0\lib\netcoreapp3.1\microsoft.codeanalysis.workspaces.dll
+++Microsoft.CodeAnalysis.Workspaces.MSBuild
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\microsoft.codeanalysis.workspaces.msbuild\4.2.0\lib\netcoreapp3.1\microsoft.codeanalysis.workspaces.msbuild.dll
+++Microsoft.Win32.SystemEvents
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\microsoft.win32.systemevents\6.0.0\lib\net6.0\microsoft.win32.systemevents.dll
+++Mono.Cecil
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\mono.cecil\0.11.4\lib\netstandard2.0\mono.cecil.dll
+++Mono.Cecil.Mdb
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\mono.cecil\0.11.4\lib\netstandard2.0\mono.cecil.mdb.dll
+++Mono.Cecil.Pdb
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\mono.cecil\0.11.4\lib\netstandard2.0\mono.cecil.pdb.dll
+++Mono.Cecil.Rocks
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\mono.cecil\0.11.4\lib\netstandard2.0\mono.cecil.rocks.dll
+++MonoMod.RuntimeDetour
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\monomod.runtimedetour\22.5.31.2\lib\net5.0\monomod.runtimedetour.dll
+++MonoMod.Utils
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\monomod.utils\22.5.31.2\lib\net5.0\monomod.utils.dll
+++MP3Sharp
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\mp3sharp\1.0.0.0\mp3sharp.dll
+++Newtonsoft.Json
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\newtonsoft.json\12.0.0.0\newtonsoft.json.dll
+++NVorbis
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\nvorbis\0.10.0.3\nvorbis.dll
+++RailSDK.Net
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\railsdk.net\1.0.0.0\railsdk.net.dll
+++ReLogic
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\relogic\1.0.0\relogic.dll
+++Steamworks.NET
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\steamworks.net\20.1.0\lib\netstandard2.1\steamworks.net.dll
+++SteelSeriesEngineWrapper
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\steelseriesenginewrapper\1.0.0.0\steelseriesenginewrapper.dll
+++System.CodeDom
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.codedom\6.0.0\lib\net6.0\system.codedom.dll
+++System.Composition.AttributedModel
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.composition.attributedmodel\6.0.0\lib\net6.0\system.composition.attributedmodel.dll
+++System.Composition.Convention
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.composition.convention\6.0.0\lib\net6.0\system.composition.convention.dll
+++System.Composition.Hosting
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.composition.hosting\6.0.0\lib\net6.0\system.composition.hosting.dll
+++System.Composition.Runtime
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.composition.runtime\6.0.0\lib\net6.0\system.composition.runtime.dll
+++System.Composition.TypedParts
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.composition.typedparts\6.0.0\lib\net6.0\system.composition.typedparts.dll
+++System.Configuration.ConfigurationManager
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.configuration.configurationmanager\6.0.0\lib\net6.0\system.configuration.configurationmanager.dll
+++System.Diagnostics.PerformanceCounter
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.diagnostics.performancecounter\6.0.0\lib\net6.0\system.diagnostics.performancecounter.dll
+++System.Drawing.Common
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.drawing.common\6.0.0\lib\net6.0\system.drawing.common.dll
+++System.IO.Pipelines
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.io.pipelines\6.0.1\lib\net6.0\system.io.pipelines.dll
+++System.Reflection.MetadataLoadContext
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.reflection.metadataloadcontext\6.0.0\lib\net6.0\system.reflection.metadataloadcontext.dll
+++System.Security.Cryptography.ProtectedData
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.security.cryptography.protecteddata\6.0.0\lib\net6.0\system.security.cryptography.protecteddata.dll
+++System.Security.Permissions
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.security.permissions\6.0.0\lib\net6.0\system.security.permissions.dll
+++System.Windows.Extensions
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\system.windows.extensions\6.0.0\lib\net6.0\system.windows.extensions.dll
+++TerrariaHooks
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\terrariahooks\0.0.0.0\terrariahooks.dll
+++tModLoader
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\tmodloader.dll
+++tModPorter
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\tmodporter\1.0.0\tmodporter.dll
+++UtfUnknown
+i:{021ada98-d22f-496b-8127-30270ec8c621}:d:\games\steamlibrary\steamapps\common\tmodloader\libraries\utf.unknown\2.5.0\lib\netcoreapp3.0\utfunknown.dll
+++Microsoft.NETCore.App
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\microsoft.netcore.app
+++tModLoader.CodeAssist (0.1.5)
+i:{021ada98-d22f-496b-8127-30270ec8c621}:>2356
+++launchSettings.json
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\properties\launchsettings.json
+++SeedGlobalTile.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\common\globaltiles\seedglobaltile.cs
+++ShroomiteHelm.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\armor\shroomitehelm.cs
+++ShroomiteHelm.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\armor\shroomitehelm.png
+++ShroomiteHelm_Head.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\items\armor\shroomitehelm_head.png
+++VortexLaser.cs
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vortexblowpipe\vortexlaser.cs
+++VortexLaser.png
+i:{021ada98-d22f-496b-8127-30270ec8c621}:c:\users\nated\documents\my games\terraria\tmodloader\modsources\blowpipemod\content\projectiles\vortexblowpipe\vortexlaser.png
+++SeedGlobalItem - Copy.cs
+++SeedGlobalItem - Copy (2).cs
+++Da.cs

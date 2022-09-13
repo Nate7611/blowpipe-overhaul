@@ -1,0 +1,77 @@
+using blowpipemod.Common.GlobalTiles;
+using blowpipemod.Content.Projectiles.CrystalBlowpipe;
+using Terraria;
+using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
+using blowpipemod.Content.Items.Ammo;
+using Microsoft.Xna.Framework;
+
+namespace blowpipemod.Content.Items.Weapons
+{
+	public class CrystalBlowpipe : ModItem
+	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Crystal Blowpipe");
+			Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
+				"Converts normal seeds into homing crystal seeds which rain crystals on enemies heads\n" +
+				"Using ichor and crystal darts reduce this weapons damage by 55%\n" +
+				"60% chance not to consume ammo");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+		}
+
+		public override void SetDefaults()
+		{
+			Item.DamageType = DamageClass.Ranged;
+			Item.width = 38;
+			Item.height = 14;
+			Item.useTime = 5;
+			Item.useAnimation = 5;
+			Item.damage = 13;
+			Item.knockBack = 3.5f;
+			Item.crit = 0;
+			Item.useAmmo = AmmoID.Dart;
+			Item.shootSpeed = 15f;
+			Item.value = Item.buyPrice(gold: 1, silver: 50);
+			Item.rare = ItemRarityID.LightRed;
+			Item.UseSound = SoundID.Item63;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.shoot = ProjectileID.PurificationPowder;
+			Item.noMelee = true;
+			Item.autoReuse = true;
+		}
+
+		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+		{
+			if (type == ProjectileID.Seed)
+            {
+				type = ModContent.ProjectileType<CrystalBlowpipeHomingProjectile>();
+			}
+            else
+            {
+				damage = (int)(damage * (1.00 - .55));
+            }
+		}
+
+		public override bool CanConsumeAmmo(Item ammo, Player player)
+		{
+			return Main.rand.NextFloat() >= .60f;
+		}
+
+		public override void UpdateInventory(Player player)
+		{
+			BlowpipePlayer.holdingManyBlowpipe = true;
+		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+				.AddIngredient(ItemID.Blowpipe, 1)
+				.AddIngredient(ItemID.CrystalShard, 25)
+				.AddIngredient(ItemID.SoulofLight, 10)
+				.AddTile(TileID.Anvils)
+				.Register();
+		}
+	}
+}

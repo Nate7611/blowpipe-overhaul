@@ -1,0 +1,8 @@
+Give stuff proper rarity
+Give stuff proper sell values
+Make sure all recipes make sense
+Fix seed velocity (maybe?)
+Accessories
+Soul of dark blowpipe
+fix plantera spin with player.itemRotation = (float)Math.Atan2(Projectile.velocity.Y * dir, Projectile.velocity.X * dir);
+
