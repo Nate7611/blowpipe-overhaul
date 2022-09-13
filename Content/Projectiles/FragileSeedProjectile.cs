@@ -48,11 +48,11 @@ namespace blowpipemod.Content.Projectiles
 				}
 				if (Main.rand.NextBool(4))
 				{
-					Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), damage / 4, 0, Main.myPlayer);
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), damage / 3, 0, Main.myPlayer);
 				}
 				if (Main.rand.NextBool(5))
 				{
-					Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), (damage / 4) + 3, 0, Main.myPlayer);
+					Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), damage / 3, 0, Main.myPlayer);
 				}
 			}
 		}
