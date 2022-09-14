@@ -20,7 +20,7 @@ namespace blowpipemod.Content.Items.Armor
 		public override void SetDefaults()
 		{
 			Item.width = 18;
-			Item.height = 18;
+			Item.height = 28;
 			Item.value = Item.sellPrice(gold: 7, silver: 50);
 			Item.rare = ItemRarityID.Yellow; 
 			Item.defense = 5;
