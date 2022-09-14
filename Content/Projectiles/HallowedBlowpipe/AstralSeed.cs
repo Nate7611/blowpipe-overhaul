@@ -38,7 +38,12 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
             {
 				Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<Explosion>(), damage, 0, Main.myPlayer);
 			}
-        }
+			for (int d = 0; d < 15; d++)
+			{
+				Dust.NewDust(target.Center, Projectile.width, Projectile.height, DustID.Smoke, 0f, 0f, 0, default(Color), 1.5f);
+				Dust.NewDust(target.Center, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 0, default(Color), 1.2f);
+			}
+		}
 
         public override void AI()
 		{
