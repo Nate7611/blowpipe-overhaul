@@ -54,7 +54,34 @@ namespace blowpipemod.Content.Items.Weapons
 
 			if (pillarTimer == 480)
             {
-				Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<vort>(), 100, 0, Main.myPlayer);
+				pillarCount++;
+
+				if (pillarCount == 1)
+                {
+					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillar>(), 100, 0, Main.myPlayer);
+				}
+				else if (pillarCount == 2)
+				{
+					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillar>(), 100, 0, Main.myPlayer);
+				}
+				else if (pillarCount == 3)
+				{
+					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillar>(), 100, 0, Main.myPlayer);
+				}
+				else if (pillarCount == 4)
+				{
+					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillar>(), 100, 0, Main.myPlayer);
+				}
+				else if (pillarCount == 5)
+				{
+					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillar>(), 100, 0, Main.myPlayer);
+				}
+                else
+                {
+					return;
+                }
+
+				pillarTimer = 0;
 			}
 		}
 

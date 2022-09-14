@@ -1,6 +1,5 @@
 using IL.Terraria.DataStructures;
 using Microsoft.Xna.Framework;
-using blowpipemod.Content.Projectiles.HallowedBlowpipe;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
@@ -9,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
+namespace blowpipemod.Content.Projectiles.VortexBlowpipe
 {
 	public class VortexPillar : ModProjectile
 	{
