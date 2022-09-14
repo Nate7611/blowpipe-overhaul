@@ -23,7 +23,7 @@ namespace blowpipemod.Content.Items.Armor
 			Item.height = 28;
 			Item.value = Item.sellPrice(gold: 7, silver: 50);
 			Item.rare = ItemRarityID.Yellow; 
-			Item.defense = 5;
+			Item.defense = 11;
 		}
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
