@@ -22,8 +22,7 @@ namespace blowpipemod.Content.Items.Weapons
 		{
 			DisplayName.SetDefault("Vortex Blowpipe");
 			Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-				"Shoots a seed which shoots various homing projectiles\n" +
-				"Right click after the weapon charges to shoot a powerful laser");
+				"\n");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 

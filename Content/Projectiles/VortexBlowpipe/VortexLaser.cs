@@ -29,7 +29,7 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipe
 			Projectile.friendly = true;
 			Projectile.penetrate = -1;
 			Projectile.tileCollide = false;
-			Projectile.DamageType = DamageClass.Magic;
+			Projectile.DamageType = DamageClass.Ranged;
 			Projectile.hide = true;
 		}
 
