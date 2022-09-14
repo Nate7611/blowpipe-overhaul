@@ -13,16 +13,17 @@ namespace blowpipemod.Content.Items.Weapons
 {
 	public class VortexBlowpipe : ModItem
 	{
-		public int summonTimer;
-		public int coolDown = 300;
-		public bool usedM2 = false;
-		public bool soundPlayed = false;
+		public int pillarCount = 1;
+		public int pillarTimer;
 
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Vortex Blowpipe");
 			Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-				"\n");
+				"Every 8 seconds a mini vortex pillar will spawn above your head\n" +
+                "Up to 5 vortex pillars can be attached to you at the same time\n" +
+                "Right click to explode the vortex pillars into many very powerful homing seeds\n" +
+                "Right clicking will put a 30 second cooldown on pillar generation\n");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
@@ -47,57 +48,18 @@ namespace blowpipemod.Content.Items.Weapons
 			Item.autoReuse = true;
 		}
 
-		public override bool AltFunctionUse(Player player)
-		{
-			return true;
-		}
-
-		public override bool CanShoot(Player player)
-		{
-			if (player.altFunctionUse == 2 && summonTimer >= 600)
-			{
-				SoundEngine.PlaySound(SoundID.Item25, player.position);
-				Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center, new Vector2(0, 0), ModContent.ProjectileType<VortexLaser>(), 100, 0, Main.myPlayer);
-				usedM2 = true;
-				soundPlayed = false;
-				summonTimer = 0;
-			}
-			return true;
-		}
-
 		public override void HoldItem(Player player)
 		{
-			if (!usedM2)
-			{
-				summonTimer++;
-			}
+			pillarTimer++;
 
-			if (summonTimer >= 600)
-			{
-				if (!soundPlayed)
-				{
-					SoundEngine.PlaySound(SoundID.Item29, player.position);
-					soundPlayed = true;
-				}
-				Dust.NewDust(player.position, player.width, player.height, DustID.HallowedWeapons, 0f, 0f, 0, default(Color), 1.0f);
+			if (pillarTimer == 480)
+            {
+				Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<vort>(), 100, 0, Main.myPlayer);
 			}
-
-			BlowpipePlayer.holdingHallowedBlowpipe = true;
 		}
 
 		public override void UpdateInventory(Player player)
 		{
-			if (usedM2)
-			{
-				coolDown--;
-				if (coolDown <= 0)
-				{
-					SoundEngine.PlaySound(SoundID.Dig, player.position);
-					usedM2 = false;
-					coolDown = 300;
-				}
-			}
-
 			BlowpipePlayer.holdingManyBlowpipe = true;
 		}
 
