@@ -11,7 +11,7 @@ using Terraria.ModLoader;
 
 namespace blowpipemod.Content.Projectiles.VortexBlowpipe
 {
-	public class VortexPillar : ModProjectile
+	public class VortexPillarLeft : ModProjectile
 	{
 		public bool exploding = false;
 
@@ -52,7 +52,7 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipe
 			if (Main.myPlayer == Projectile.owner)
 			{
 				Player player = Main.player[Projectile.owner];
-				Projectile.Center = player.Center + new Vector2(0, -50);
+				Projectile.Center = player.Center + new Vector2(50, 0);
 
 				if (Main.mouseRight && Main.mouseRightRelease && !exploding)
                 {

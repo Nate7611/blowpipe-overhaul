@@ -22,6 +22,8 @@ namespace blowpipemod
         public static bool holdingManyBlowpipe;
         public static bool blockingSeeds;
         public static bool holdingHallowedBlowpipe;
+        public static bool holdingVortexBlowpipe;
+        public static int pillarCount;
 
         public override void ResetEffects()
         {
@@ -29,6 +31,7 @@ namespace blowpipemod
             holdingMoreBlowpipe = false;
             blockingSeeds = false;
             holdingHallowedBlowpipe = false;
+            holdingVortexBlowpipe = false;
         }
     }
 }
