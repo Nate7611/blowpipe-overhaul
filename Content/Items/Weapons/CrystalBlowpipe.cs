@@ -48,7 +48,7 @@ namespace blowpipemod.Content.Items.Weapons
             {
 				type = ModContent.ProjectileType<CrystalBlowpipeHomingProjectile>();
 			}
-            else
+            else if (type == ProjectileID.IchorDart | type == ProjectileID.CrystalDart)
             {
 				damage = (int)(damage * (1.00 - .55));
             }
