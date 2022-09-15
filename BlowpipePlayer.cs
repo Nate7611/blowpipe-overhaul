@@ -24,7 +24,6 @@ namespace blowpipemod
         public static bool holdingHallowedBlowpipe;
         public static bool holdingVortexBlowpipe;
         public static bool musicProjectileSpawned;
-        public static int pillarCount;
 
         public override void ResetEffects()
         {

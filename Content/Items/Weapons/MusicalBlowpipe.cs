@@ -23,7 +23,8 @@ namespace blowpipemod.Content.Items.Weapons
 			DisplayName.SetDefault("Musical Blowpipe");
 			Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
                 "Converts normal seeds into musical notes \n" +
-				"Periodicaly summons musical notes that will heal you on hit");
+				"Periodicaly summons musical notes that will heal you on hit\n" +
+				"Does not resemble any other weapon...");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
@@ -76,7 +77,7 @@ namespace blowpipemod.Content.Items.Weapons
             {
 				if (BlowpipePlayer.musicProjectileSpawned == false)
                 {
-					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.position + new Vector2(0, -50), new Vector2(0, 0), ModContent.ProjectileType<MusicalBlowpipeProjectile>(), 100, 0, player.whoAmI);
+					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.position + new Vector2(0, -80), new Vector2(0, 0), ModContent.ProjectileType<MusicalBlowpipeProjectile>(), 100, 0, player.whoAmI);
 					musicProjectileTimer = 0;
 				}
                 else
@@ -94,7 +95,10 @@ namespace blowpipemod.Content.Items.Weapons
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.HellstoneBar, 17)
+				.AddIngredient(ItemID.Blowpipe)
+				.AddIngredient(ItemID.CrystalShard, 20)
+				.AddIngredient(ItemID.SoulofNight, 8)
+				.AddIngredient(ItemID.SoulofSight, 15)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}

@@ -54,7 +54,7 @@ namespace blowpipemod.Content.Projectiles
 				if (Main.myPlayer == Projectile.owner)
                 {
 					Player player = Main.player[Projectile.owner];
-					Projectile.Center = player.Center + new Vector2(0, -50);
+					Projectile.Center = player.Center + new Vector2(0, -80);
 				}
 
 				return;
