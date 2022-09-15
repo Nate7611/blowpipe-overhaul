@@ -1,0 +1,18 @@
+Effects of all blowpipes:
+Adamantite/Titanium: Shoots 3 seeds all at once
+Crimtane: Every 3rd shot heals you
+Demonite: Every 3rd shot homes
+Hallowed: Right click to summon 3 astral blowpipes around you which shoot homing seeds that explode on hit
+Hellstone: Has a 1/3 chance to inflict hellfire on hit
+Ice: Has a 1/3 chance to inflict frostburn on hit
+Jungle: Every 8th shot summons a jungle orb which homes on enemies
+Musical: Every 8 seconds it summons a homing music note which heals the player when it hits a enemy
+Necro: Has 4 chances to split on impact dealing extra damage
+Plantera: A lot of stuff
+Crystal: Shoots insanely fast, converts normal bullets into 
+Vortex: Summons 3 mini vortex pillars around you over time. When you right click, explode all pillars which spawn a lot of homing seeds
+
+Effects of Zenith Blowpipe:
+Combines and buffs every blowpipe effects
+Mimic mythril blowpipes shooting 2 bullets code but make it 6
+Cycle the type variable to shoot diffrent projectiles 

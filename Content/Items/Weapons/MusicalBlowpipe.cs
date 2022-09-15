@@ -31,8 +31,8 @@ namespace blowpipemod.Content.Items.Weapons
 		public override void SetDefaults()
 		{
 			Item.DamageType = DamageClass.Ranged;
-			Item.width = 38;
-			Item.height = 12;
+			Item.width = 40;
+			Item.height = 10;
 			Item.useTime = 10;
 			Item.useAnimation = 90;
 			Item.damage = 50;
