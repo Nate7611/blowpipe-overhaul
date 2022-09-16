@@ -4,6 +4,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 using blowpipemod.Content.Items.Ammo;
+using Microsoft.Xna.Framework;
 
 namespace blowpipemod.Content.Items.Weapons
 {
@@ -37,7 +38,7 @@ namespace blowpipemod.Content.Items.Weapons
 			Item.autoReuse = true;
 		}
 
-        public override void UpdateInventory(Player player)
+		public override void UpdateInventory(Player player)
         {
 			BlowpipePlayer.holdingManyBlowpipe = true;
 		}

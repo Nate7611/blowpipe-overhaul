@@ -49,7 +49,7 @@ namespace blowpipemod.Content.Items.Weapons
 
 			if (shotTracker >= 8)
 			{
-				Projectile.NewProjectile(source, player.position, velocity*0, ModContent.ProjectileType<JungleOrb>(), damage * 3, knockback, player.whoAmI);
+				Projectile.NewProjectile(source, player.position + new Vector2(0, -75), velocity*0, ModContent.ProjectileType<JungleOrb>(), damage * 3, knockback, player.whoAmI);
 				shotTracker = 0;
 			}
 

@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -26,6 +27,17 @@ namespace blowpipemod.Content.Projectiles
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = false;
 			Projectile.timeLeft = 600;
+		}
+
+		public override void OnSpawn(Terraria.DataStructures.IEntitySource source)
+		{
+			SoundEngine.PlaySound(SoundID.Grass, Projectile.position);
+
+			for (int d = 0; d < 10; d++)
+			{
+				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.JungleGrass, 0f, 0f, 0, default(Color), 1f);
+				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.JunglePlants, 0f, 0f, 0, default(Color), 1f);
+			}
 		}
 
 		public override void AI()
@@ -63,5 +75,14 @@ namespace blowpipemod.Content.Projectiles
 
 			return closestNPC;
 		}
-	}
+
+        public override void Kill(int timeLeft)
+        {
+			for (int d = 0; d < 10; d++)
+			{
+				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.JungleGrass, 0f, 0f, 0, default(Color), 1f);
+				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.JunglePlants, 0f, 0f, 0, default(Color), 1f);
+			}
+		}
+    }
 }
