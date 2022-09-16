@@ -30,7 +30,7 @@ namespace blowpipemod.Content.Projectiles
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            			if (target.lifeMax >= 6)
+            if (target.lifeMax >= 6)
             {
 				Player player = Main.player[Projectile.owner];
 				player.Heal(damage / 3);

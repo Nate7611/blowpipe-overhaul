@@ -36,7 +36,6 @@ namespace blowpipemod.Content.Projectiles
 			Projectile.light = 1;
 			Projectile.ignoreWater = false;
 			Projectile.tileCollide = true;
-			Projectile.extraUpdates = 1;
 
 			AIType = ProjectileID.Seed;
 		}

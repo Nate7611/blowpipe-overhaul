@@ -13,8 +13,8 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
 {
 	public class AstralBlowpipeRight : ModProjectile
 	{
-		public int canShoot = 60;
-		public int lifespan = 2400;
+		public int canShoot = 30;
+		public int lifespan = 1200;
 
 		public override void SetStaticDefaults()
 		{
@@ -34,7 +34,6 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
 			Projectile.penetrate = 1;
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = false;
-			Projectile.extraUpdates = 1;
 		}
 
 		public override void OnSpawn(Terraria.DataStructures.IEntitySource source)

@@ -15,7 +15,7 @@ namespace blowpipemod.Content.Items.Weapons
 		{
 			DisplayName.SetDefault("Hellstone Blowpipe");
 			Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-				"Converts normal seeds to fiery seeds which inflicts Hellfire");
+				"Converts normal seeds to fiery seeds which inflicts Hellfire and moves faster");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 

@@ -22,7 +22,7 @@ namespace blowpipemod.Content.Projectiles
 		{
 			Projectile.width = 8;
 			Projectile.height = 8;
-			Projectile.aiStyle = 0;
+			Projectile.aiStyle = 1;
 			Projectile.DamageType = DamageClass.Ranged;
 			Projectile.friendly = true;
 			Projectile.hostile = false;

@@ -30,7 +30,7 @@ namespace blowpipemod.Content.Projectiles.VineyBlowpipe
 			Projectile.penetrate = 1;
 			Projectile.ignoreWater = false;
 			Projectile.tileCollide = true;
-			Projectile.extraUpdates = 1;
+
 			AIType = ProjectileID.Seed;
 		}
 
