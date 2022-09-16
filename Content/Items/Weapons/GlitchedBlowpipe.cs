@@ -115,6 +115,8 @@ namespace blowpipemod.Content.Items.Weapons
 			Item.useTime = Main.rand.Next(1, 51);
 			Item.useTime = Main.rand.Next(1, 51);
 
+			Item.crit = Main.rand.Next(1, 41);
+
 			Item.shootSpeed = Main.rand.Next(1, 16);
 
 			float numberProjectiles = Main.rand.Next(2, 11);
@@ -189,7 +191,10 @@ namespace blowpipemod.Content.Items.Weapons
         public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.MythrilBar, 10)
+				.AddIngredient(ItemID.HallowedBar, 15)
+				.AddIngredient(ItemID.SoulofFright, 10)
+				.AddIngredient(ItemID.SoulofMight, 10)
+				.AddIngredient(ItemID.SoulofSight, 10)
 				.AddTile(TileID.MythrilAnvil)
 				.Register();
 		}

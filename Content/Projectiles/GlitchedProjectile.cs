@@ -14,12 +14,14 @@ namespace blowpipemod.Content.Projectiles
 	{
 		public int randomDust;
 		public int spawnDust;
+		public int spriteTimer;
 
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Glitched Seed");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 1;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
+			Main.projFrames[Projectile.type] = 6;
 		}
 
 		public override void SetDefaults()
@@ -37,6 +39,71 @@ namespace blowpipemod.Content.Projectiles
 			Projectile.extraUpdates = 1;
 
 			AIType = ProjectileID.Seed;
+		}
+
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.Venom, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.BetsysCurse, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.Bleeding, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.Confused, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.CursedInferno, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.Daybreak, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.Frostburn, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.Ichor, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.OnFire, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.BoneJavelin, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.Poisoned, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.ShadowFlame, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.OnFire3, Main.rand.Next(40, 251), false);
+			}
+			if (Main.rand.NextBool(40))
+			{
+				target.AddBuff(BuffID.Frostburn2, Main.rand.Next(40, 251), false);
+			}
+		}
+
+        public override void OnSpawn(Terraria.DataStructures.IEntitySource source)
+        {
+			Projectile.frame = Main.rand.Next(0, 6);
 		}
 
         public override void AI()
@@ -86,6 +153,13 @@ namespace blowpipemod.Content.Projectiles
 				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.JunglePlants, 0f, 0f, 0, default(Color), 1.0f);
 			}
 
+			spriteTimer++;
+
+			if (spriteTimer == Main.rand.Next(15, 51))
+            {
+				Projectile.frame = Main.rand.Next(0, 6);
+				spriteTimer = 0;
+			}
 		}
 
         public override bool OnTileCollide(Vector2 oldVelocity)
@@ -93,22 +167,6 @@ namespace blowpipemod.Content.Projectiles
 			Projectile.Kill();
 
 			return false;
-		}
-
-		public override bool PreDraw(ref Color lightColor)
-		{
-			Main.instance.LoadProjectile(Projectile.type);
-			Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
-
-			Vector2 drawOrigin = new Vector2(texture.Width * 0.5f, Projectile.height * 0.5f);
-			for (int k = 0; k < Projectile.oldPos.Length; k++)
-			{
-				Vector2 drawPos = (Projectile.oldPos[k] - Main.screenPosition) + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
-				Color color = Projectile.GetAlpha(lightColor) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
-				Main.EntitySpriteDraw(texture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0);
-			}
-
-			return true;
 		}
 
 		public override void Kill(int timeLeft)

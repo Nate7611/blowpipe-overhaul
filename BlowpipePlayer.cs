@@ -22,6 +22,7 @@ namespace blowpipemod
         public static bool holdingManyBlowpipe;
         public static bool blockingSeeds;
         public static bool holdingHallowedBlowpipe;
+        public static bool holdingGlitchedBlowpipe;
         public static bool holdingVortexBlowpipe;
         public static bool musicProjectileSpawned;
 
@@ -33,6 +34,7 @@ namespace blowpipemod
             holdingHallowedBlowpipe = false;
             holdingVortexBlowpipe = false;
             musicProjectileSpawned = false;
+            holdingGlitchedBlowpipe = false;
         }
     }
 }

@@ -3,11 +3,8 @@ Give stuff proper sell values
 Make sure all recipes make sense
 Fix seed velocity (maybe?)
 Accessories
-Soul of dark blowpipe
 fix plantera spin with player.itemRotation = (float)Math.Atan2(Projectile.velocity.Y * dir, Projectile.velocity.X * dir);
 add homing seed (vortex seed)
 make icon for mod
 take screen shots of boss fights with new blowpipes for steam workshot
-fix glitched blowpipe on hover error
-add damage = ??? to glitch blowpipe
 
