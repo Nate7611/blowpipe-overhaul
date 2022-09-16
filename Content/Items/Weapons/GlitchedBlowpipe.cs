@@ -16,11 +16,17 @@ namespace blowpipemod.Content.Items.Weapons
 	{
 		public int randomSound;
 		public int randomTextAssigner;
-		public string randomText;
+		public string finalText;
+		public string randomText = null;
 
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Glitched Blowpipe");
+			Tooltip.SetDefault("??? ranged damage\n" +
+				"??? critical strike chance\n" +
+                "??? speed\n" +
+                "??? knockback\n" +
+                "Allows the collection of ??? seeds for ammo");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
@@ -47,9 +53,18 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-			var line = new TooltipLine(Mod, "RandomText", randomText);
+			if (randomText == null)
+            {
+				finalText = "System.NullReferenceException: Object reference not set to an instance of an object.";
+            }
+            else
+            {
+				finalText = randomText;
+            }
+
+			var line = new TooltipLine(Mod, "RandomText", finalText);
 			tooltips.Add(line);
-			line.Text = randomText;
+			line.Text = finalText;
 		}
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
@@ -116,9 +131,21 @@ namespace blowpipemod.Content.Items.Weapons
         public override void UpdateInventory(Player player)
 		{
 			BlowpipePlayer.holdingManyBlowpipe = true;
-			randomTextAssigner = Main.rand.Next(1, 11);
-			if (randomTextAssigner == 1)
+			if (!BlowpipePlayer.holdingGlitchedBlowpipe)
             {
+				randomText = null;
+            }
+
+		}
+
+        public override void HoldItem(Player player)
+        {
+			BlowpipePlayer.holdingGlitchedBlowpipe = true;
+
+			randomTextAssigner = Main.rand.Next(1, 11);
+
+			if (randomTextAssigner == 1)
+			{
 				randomText = "na3lMI2l*%9X#Q5u770nbJB4HcKfRZ6zz*8clgyTQQM$qPzE2w";
 			}
 			if (randomTextAssigner == 2)
@@ -159,7 +186,7 @@ namespace blowpipemod.Content.Items.Weapons
 			}
 		}
 
-		public override void AddRecipes()
+        public override void AddRecipes()
 		{
 			CreateRecipe()
 				.AddIngredient(ItemID.MythrilBar, 10)
