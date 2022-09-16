@@ -8,5 +8,6 @@ fix plantera spin with player.itemRotation = (float)Math.Atan2(Projectile.veloci
 add homing seed (vortex seed)
 make icon for mod
 take screen shots of boss fights with new blowpipes for steam workshot
-
+fix glitched blowpipe on hover error
+add damage = ??? to glitch blowpipe
 
