@@ -36,7 +36,12 @@ namespace blowpipemod.Content.Projectiles
 			AIType = ProjectileID.Seed;
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void AI()
+        {
+			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 0, default(Color), 1.0f);
+		}
+
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
 		{
 			if (Main.rand.NextBool(3))
 			{
