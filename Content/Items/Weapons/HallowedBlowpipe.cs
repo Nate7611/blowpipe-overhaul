@@ -56,7 +56,7 @@ namespace blowpipemod.Content.Items.Weapons
 
 		public override bool CanShoot(Player player)
 		{
-			if (player.altFunctionUse == 2 && summonTimer >= 600)
+			if (player.altFunctionUse == 2 && summonTimer >= 900)
 			{
 				SoundEngine.PlaySound(SoundID.Item25, player.position);
 				Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<AstralBlowpipeRight>(), 100, 0, Main.myPlayer);
@@ -76,7 +76,7 @@ namespace blowpipemod.Content.Items.Weapons
 				summonTimer++;
 			}
 
-			if (summonTimer >= 600)
+			if (summonTimer >= 900)
 			{
 				if (!soundPlayed)
                 {
