@@ -11,8 +11,7 @@ Necro: Has 4 chances to split on impact dealing extra damage
 Plantera: A lot of stuff
 Crystal: Shoots insanely fast, converts normal bullets into 
 Vortex: Summons 3 mini vortex pillars around you over time. When you right click, explode all pillars which spawn a lot of homing seeds
+Glitched blowpipe: random bullshit go
 
 Effects of Zenith Blowpipe:
-Combines and buffs every blowpipe effects
-Mimic mythril blowpipes shooting 2 bullets code but make it 6
-Cycle the type variable to shoot diffrent projectiles 
+idk

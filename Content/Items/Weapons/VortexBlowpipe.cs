@@ -21,10 +21,10 @@ namespace blowpipemod.Content.Items.Weapons
 		{
 			DisplayName.SetDefault("Vortex Blowpipe");
 			Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-				"Every 8 seconds a mini vortex pillar will spawn above your head\n" +
+				"Every 5 seconds a mini vortex pillar will spawn above your head\n" +
                 "Up to 3 vortex pillars can be attached to you at the same time\n" +
                 "Right click to explode the vortex pillars into many very powerful homing seeds\n" +
-                "Right clicking will put a 15 second cooldown on pillar generation\n");
+                "Right clicking will put a 13 second cooldown on pillar generation\n");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
@@ -33,9 +33,9 @@ namespace blowpipemod.Content.Items.Weapons
 			Item.DamageType = DamageClass.Ranged;
 			Item.width = 38;
 			Item.height = 12;
-			Item.useTime = 22;
-			Item.useAnimation = 22;
-			Item.damage = 100;
+			Item.useTime = 15;
+			Item.useAnimation = 15;
+			Item.damage = 85;
 			Item.knockBack = 3.5f;
 			Item.crit = 0;
 			Item.useAmmo = AmmoID.Dart;
@@ -53,22 +53,22 @@ namespace blowpipemod.Content.Items.Weapons
 		{
 			pillarTimer++;
 
-			if (pillarTimer == 480)
+			if (pillarTimer == 300)
             {
 				pillarCount++;
 
 				if (pillarCount == 1)
                 {
-					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(0, -50), new Vector2(0, 0), ModContent.ProjectileType<VortexPillar>(), 0, 0, Main.myPlayer);
+					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(0, -80), new Vector2(0, 0), ModContent.ProjectileType<VortexPillar>(), 0, 0, Main.myPlayer);
 					isPillarAlive = true;
 				}
 				else if (pillarCount == 2)
 				{
-					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillarRight>(), 0, 0, Main.myPlayer);
+					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-80, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillarRight>(), 0, 0, Main.myPlayer);
 				}
 				else if (pillarCount == 3)
 				{
-					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(50, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillarLeft>(), 0, 0, Main.myPlayer);
+					Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(80, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillarLeft>(), 0, 0, Main.myPlayer);
 				}
                 else
                 {
@@ -80,7 +80,7 @@ namespace blowpipemod.Content.Items.Weapons
 
 			if (Main.mouseRight && Main.mouseRightRelease && isPillarAlive)
             {
-				pillarTimer = -900;
+				pillarTimer = -780;
 				pillarCount = 0;
 				isPillarAlive = false;
             }
