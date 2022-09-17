@@ -125,7 +125,7 @@ namespace blowpipemod.Content.Items.Weapons
 			for (int i = 0; i < numberProjectiles; i++)
 			{
 				Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * 1f;
-				Projectile.NewProjectile(source, position, perturbedSpeed, ModContent.ProjectileType<GlitchedProjectile>(), Main.rand.Next(1, 301), Main.rand.Next(1, 16), player.whoAmI);
+				Projectile.NewProjectile(source, position, perturbedSpeed, ModContent.ProjectileType<GlitchedProjectile>(), Main.rand.Next(1, 351), Main.rand.Next(1, 16), player.whoAmI);
 			}
 			return false;
 		}
