@@ -14,7 +14,7 @@ namespace blowpipemod.Content.Items.Weapons
 	public class VineyBlowpipe : ModItem
 	{
 		public int shotTracker;
-		public int shotLoop = 1;
+		public int vineySpinTimer;
 
 		public override void SetStaticDefaults()
 		{
@@ -52,10 +52,6 @@ namespace blowpipemod.Content.Items.Weapons
 				if (shotTracker <= 1)
 				{
 					type = ModContent.ProjectileType<VineyBlowpipeHomingProjectile>();
-					if (shotLoop == 4)
-					{
-						shotLoop = 0;
-					}
 				}
 				if (shotTracker == 2)
 				{
@@ -63,7 +59,7 @@ namespace blowpipemod.Content.Items.Weapons
 				}
 				if (shotTracker == 3)
 				{
-					type = ModContent.ProjectileType<VineyBlowpipeVenomProjectile>();
+					type = ModContent.ProjectileType<VineyBlowpipeHomingProjectile>();
 				}
 				if (shotTracker == 4)
 				{
@@ -71,8 +67,9 @@ namespace blowpipemod.Content.Items.Weapons
 				}
 				if (shotTracker == 5)
 				{
-					if (shotLoop == 1)
+					if (BlowpipePlayer.vinySpinnerAlive == false)
 					{
+						vineySpinTimer = 360;
 						type = ModContent.ProjectileType<VineyBlowpipeSpinProjectile>();
 					}
 					else
@@ -85,7 +82,6 @@ namespace blowpipemod.Content.Items.Weapons
 				{
 					type = ModContent.ProjectileType<VineyBlowpipeHomingProjectile>();
 					shotTracker = 0;
-					shotLoop++;
 				}
 			}
 		}
@@ -99,6 +95,13 @@ namespace blowpipemod.Content.Items.Weapons
         public override void UpdateInventory(Player player)
 		{
 			BlowpipePlayer.holdingManyBlowpipe = true;
+
+			vineySpinTimer--;
+
+			if (vineySpinTimer > 0)
+            {
+				BlowpipePlayer.vinySpinnerAlive = true;
+            }
 		}
 
 		public override void AddRecipes()

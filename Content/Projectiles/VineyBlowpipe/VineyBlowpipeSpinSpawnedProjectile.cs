@@ -34,16 +34,15 @@ namespace blowpipemod.Content.Projectiles.VineyBlowpipe
 			Projectile.penetrate = -1;;
 			Projectile.ignoreWater = false;
 			Projectile.tileCollide = true;
-			Projectile.extraUpdates = 1;
 		}
 
         public override void AI()
 		{
-			vineLifespan++;
-
 			Projectile.netUpdate = true;
 
-			if (++Projectile.frameCounter >= 7)
+			vineLifespan++;
+
+			if (++Projectile.frameCounter >= 3)
 			{
 				Projectile.frameCounter = 0;
 				if (++Projectile.frame >= Main.projFrames[Projectile.type])
@@ -52,7 +51,7 @@ namespace blowpipemod.Content.Projectiles.VineyBlowpipe
 
 			if (Projectile.frame == 21)
             {
-				Projectile.rotation += 0.15f;
+				Projectile.rotation += 0.30f;
 				Projectile.friendly = true;
 			}
             else
@@ -65,7 +64,7 @@ namespace blowpipemod.Content.Projectiles.VineyBlowpipe
 				Projectile.Center = Main.MouseWorld;
 			}
 
-			if (vineLifespan >= 720)
+			if (vineLifespan >= 360)
             {
 				Projectile.Kill();
             }
