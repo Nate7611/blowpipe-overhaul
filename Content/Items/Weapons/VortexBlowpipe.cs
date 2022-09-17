@@ -21,10 +21,10 @@ namespace blowpipemod.Content.Items.Weapons
 		{
 			DisplayName.SetDefault("Vortex Blowpipe");
 			Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-				"Every 5 seconds a mini vortex pillar will spawn above your head\n" +
-                "Up to 3 vortex pillars can be attached to you at the same time\n" +
-                "Right click to explode the vortex pillars into many very powerful homing seeds\n" +
-                "Right clicking will put a 13 second cooldown on pillar generation\n");
+				"Every 5 seconds a vortex orb will spawn above your head\n" +
+				"Up to 3 vortex orbs can be attached to you at the same time\n" +
+				"Right click to explode the vortex orbs into many very powerful homing seeds\n" +
+				"Right clicking will put a 13 second cooldown on orb generation\n");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 

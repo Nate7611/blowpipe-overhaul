@@ -17,7 +17,7 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipe
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mini Vortex Pillar");
+			DisplayName.SetDefault("Vortex orb");
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 1;
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
 			Main.projFrames[Projectile.type] = 7;
