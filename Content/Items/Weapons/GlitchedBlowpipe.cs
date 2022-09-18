@@ -16,6 +16,7 @@ namespace blowpipemod.Content.Items.Weapons
 	{
 		public int randomSound;
 		public int randomTextAssigner;
+		public int randomUse;
 		public string finalText;
 		public string randomText = null;
 
@@ -55,7 +56,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
 			if (randomText == null)
             {
-				finalText = "System.NullReferenceException: Object reference not set to an instance of an object.";
+				finalText = "[c/FF2525:System.NullReferenceException: Object reference not set to an instance of an object.]f";
             }
             else
             {
@@ -112,8 +113,10 @@ namespace blowpipemod.Content.Items.Weapons
 				Item.UseSound = SoundID.Item108;
 			}
 
-			Item.useTime = Main.rand.Next(1, 51);
-			Item.useTime = Main.rand.Next(1, 51);
+			randomUse = Main.rand.Next(1, 51);
+
+			Item.useTime = randomUse;
+			Item.useAnimation = randomUse;
 
 			Item.crit = Main.rand.Next(1, 41);
 
@@ -148,43 +151,43 @@ namespace blowpipemod.Content.Items.Weapons
 
 			if (randomTextAssigner == 1)
 			{
-				randomText = "na3lMI2l*%9X#Q5u770nbJB4HcKfRZ6zz*8clgyTQQM$qPzE2w";
+				randomText = "[c/FF2525:na3lMI2l*%9X#Q5u770nbJB4HcKfRZ6zz*8clgyTQQM$qPzE2w]";
 			}
 			if (randomTextAssigner == 2)
 			{
-				randomText = "JyXWyXU1QDc6&vDix$n16DQ9XzRtny*iJhNsKBVc1WPGSqmxfG";
+				randomText = "[c/FF2525:JyXWyXU1QDc6&vDix$n16DQ9XzRtny*iJhNsKBVc1WPGSqmxfG]";
 			}
 			if (randomTextAssigner == 3)
 			{
-				randomText = "FJ6SugEkDrjlW#81gNoVbZmm7BGWd5WbJDC&cE$ZiA9KcAY5Yq";
+				randomText = "[c/FF2525:FJ6SugEkDrjlW#81gNoVbZmm7BGWd5WbJDC&cE$ZiA9KcAY5Yq]";
 			}
 			if (randomTextAssigner == 4)
 			{
-				randomText = "S2ktlQ83s^1sz5PVya*M83d%^7RORcU0Q0p$WvV!LXbanTeNWf";
+				randomText = "[c/FF2525:S2ktlQ83s^1sz5PVya*M83d%^7RORcU0Q0p$WvV!LXbanTeNWf]";
 			}
 			if (randomTextAssigner == 5)
 			{
-				randomText = "^V169gbn!$EjBYsj6hR*SUcM7eMqh3#BG%d71ozHtw$@M9llvz";
+				randomText = "[c/FF2525:^V169gbn!$EjBYsj6hR*SUcM7eMqh3#BG%d71ozHtw$@M9llvz]";
 			}
 			if (randomTextAssigner == 6)
 			{
-				randomText = "5@vxPZ6H3dQs9cs53a8@tPw4lL0VaLOC*m#eWsx@@BKJS7qQuE";
+				randomText = "[c/FF2525:5@vxPZ6H3dQs9cs53a8@tPw4lL0VaLOC*m#eWsx@@BKJS7qQuE]";
 			}
 			if (randomTextAssigner == 7)
 			{
-				randomText = "nxV93k7Psx&#L8Q0wEr*ipFzRY%%cYLaAp#291Nmk$M2ldv6pA";
+				randomText = "[c/FF2525:nxV93k7Psx&#L8Q0wEr*ipFzRY%%cYLaAp#291Nmk$M2ldv6pA]";
 			}
 			if (randomTextAssigner == 8)
 			{
-				randomText = "v97Zx5GkAaDlzVd%4M8oAevCv5jBq0Eoa$%R4KIN%Kln4yCIPA";
+				randomText = "[c/FF2525:v97Zx5GkAaDlzVd%4M8oAevCv5jBq0Eoa$%R4KIN%Kln4yCIPA]";
 			}
 			if (randomTextAssigner == 9)
 			{
-				randomText = "W$Qto9jUV^x21rWT*oVTJ&814BudsvisaAgUo$^U1GhIgnEN1B";
+				randomText = "[c/FF2525:W$Qto9jUV^x21rWT*oVTJ&814BudsvisaAgUo$^U1GhIgnEN1B]";
 			}
 			if (randomTextAssigner == 10)
 			{
-				randomText = "%sEJkYBSY2hpMfyf@1GdFBAqwQ3ar!a4L^#3rdWcP57&iN4YT0";
+				randomText = "[c/FF2525:%sEJkYBSY2hpMfyf@1GdFBAqwQ3ar!a4L^#3rdWcP57&iN4YT0]";
 			}
 		}
 
