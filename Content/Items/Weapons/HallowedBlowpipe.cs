@@ -49,14 +49,9 @@ namespace blowpipemod.Content.Items.Weapons
 			Item.autoReuse = true;
 		}
 
-        public override bool AltFunctionUse(Player player)
+        public override void HoldItem(Player player)
         {
-			return true;
-        }
-
-		public override bool CanShoot(Player player)
-		{
-			if (player.altFunctionUse == 2 && summonTimer >= 900)
+			if (Main.mouseRight && summonTimer >= 900)
 			{
 				SoundEngine.PlaySound(SoundID.Item25, player.position);
 				Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<AstralBlowpipeRight>(), 100, 0, Main.myPlayer);
@@ -66,11 +61,7 @@ namespace blowpipemod.Content.Items.Weapons
 				soundPlayed = false;
 				summonTimer = 0;
 			}
-			return true;
-		}
 
-        public override void HoldItem(Player player)
-        {
 			if (!usedM2)
             {
 				summonTimer++;

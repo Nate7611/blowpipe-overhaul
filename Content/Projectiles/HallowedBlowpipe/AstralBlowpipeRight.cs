@@ -61,7 +61,7 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
 				if (Main.mouseLeft && canShoot <= 0 && BlowpipePlayer.holdingHallowedBlowpipe)
 				{
 					Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.DirectionTo(Main.MouseWorld) * 15, ModContent.ProjectileType<AstralSeed>(), 100, 0, Main.myPlayer);
-					canShoot = 60;
+					canShoot = 30;
 				}
 			}
 
