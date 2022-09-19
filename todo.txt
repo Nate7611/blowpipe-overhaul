@@ -6,4 +6,5 @@ fix plantera spin with player.itemRotation = (float)Math.Atan2(Projectile.veloci
 add homing seed (vortex seed)
 make icon for mod
 take screen shots of boss fights with new blowpipes for steam workshot
-fix alt function firing the weapon
+add modded projectiles to music blowpipe
+make treble clef timer only tick up if there is no clef alive

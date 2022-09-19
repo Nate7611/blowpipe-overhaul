@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -16,8 +17,8 @@ namespace blowpipemod.Content.Projectiles
 
 		public override void SetDefaults()
 		{
-			Projectile.width = 48;
-			Projectile.height = 45;
+			Projectile.width = 31;
+			Projectile.height = 81;
 			Projectile.aiStyle = 0;
 			Projectile.DamageType = DamageClass.Ranged;
 			Projectile.friendly = true;
@@ -32,6 +33,8 @@ namespace blowpipemod.Content.Projectiles
         {
             if (target.lifeMax >= 6)
             {
+				SoundEngine.PlaySound(SoundID.Item139, Projectile.position);
+
 				Player player = Main.player[Projectile.owner];
 				player.Heal(damage / 3);
 				for (int d = 0; d < 15; d++)
@@ -61,7 +64,6 @@ namespace blowpipemod.Content.Projectiles
 			}
 
 			Projectile.velocity = (closestNPC.Center - Projectile.Center).SafeNormalize(Vector2.Zero) * projSpeed;
-			Projectile.rotation = Projectile.velocity.ToRotation();
 		}
 
 		public NPC FindClosestNPC(float maxDetectDistance)
