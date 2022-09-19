@@ -28,6 +28,7 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipe
 			Projectile.hostile = false;
 			Projectile.ignoreWater = true;
 			Projectile.tileCollide = true;
+			Projectile.timeLeft = 1200;
 
 			AIType = ProjectileID.Seed;
 		}
