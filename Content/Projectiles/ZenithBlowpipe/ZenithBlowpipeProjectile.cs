@@ -27,6 +27,39 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
             Projectile.tileCollide = true;
         }
 
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            if (Main.rand.NextBool(12))
+            {
+                if (Main.myPlayer == Projectile.owner)
+                {
+                    for (int i = 0; i < 6; i++)
+                    {
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), damage / 3, 0, Main.myPlayer);
+                    }
+                }
+            }
+
+            if (target.lifeMax >= 6)
+            {
+                Player player = Main.player[Projectile.owner];
+                player.Heal(damage / 6);
+                for (int d = 0; d < 10; d++)
+                {
+                    Dust.NewDust(target.position, target.width, target.height, DustID.LifeDrain, 0f, 0f, 0, default(Color), 1.2f);
+                }
+            }
+
+            if (Main.rand.NextBool(2))
+            {
+                target.AddBuff(BuffID.OnFire3, 240);
+            }
+            if (Main.rand.NextBool(2))
+            {
+                target.AddBuff(BuffID.Frostburn2, 240);
+            }
+        }
+
         public override void AI()
         {
             float maxDetectRadius = 200f;

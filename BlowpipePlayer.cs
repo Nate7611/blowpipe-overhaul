@@ -4,6 +4,7 @@ namespace blowpipemod
 {
     public class BlowpipePlayer : ModPlayer
     {
+        public static bool holdingFewBlowpipe;
         public static bool holdingMoreBlowpipe;
         public static bool holdingManyBlowpipe;
         public static bool blockingSeeds;

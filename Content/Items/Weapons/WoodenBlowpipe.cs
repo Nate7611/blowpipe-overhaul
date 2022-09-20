@@ -20,9 +20,9 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 38;
             Item.height = 8;
-            Item.useTime = 25;
-            Item.useAnimation = 25;
-            Item.damage = 4;
+            Item.useTime = 35;
+            Item.useAnimation = 35;
+            Item.damage = 6;
             Item.knockBack = 2.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -38,7 +38,7 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void UpdateInventory(Player player)
         {
-            BlowpipePlayer.holdingMoreBlowpipe = true;
+            BlowpipePlayer.holdingFewBlowpipe = true;
         }
 
         public override void AddRecipes()
