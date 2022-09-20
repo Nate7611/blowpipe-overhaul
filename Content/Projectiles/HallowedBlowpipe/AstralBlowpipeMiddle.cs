@@ -52,8 +52,12 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
                 Projectile.Center = player.Center + new Vector2(0, -50);
                 Projectile.rotation = Projectile.Center.AngleTo(Main.MouseWorld);
 
-                if (Main.mouseLeft && canShoot <= 0 && BlowpipePlayer.holdingHallowedBlowpipe)
+                if (Main.mouseLeft && canShoot <= 0 && Main.myPlayer == Projectile.owner)
                 {
+                    if (BlowpipePlayer.holdingHallowedBlowpipe)
+                    {
+
+                    }
                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.DirectionTo(Main.MouseWorld) * 15, ModContent.ProjectileType<AstralSeed>(), 100, 0, Main.myPlayer);
                     canShoot = 30;
                 }

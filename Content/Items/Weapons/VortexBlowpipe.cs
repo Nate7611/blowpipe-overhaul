@@ -49,7 +49,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             pillarTimer++;
 
-            if (pillarTimer == 300)
+            if (pillarTimer == 300 && Main.myPlayer == player.whoAmI)
             {
                 pillarCount++;
 
