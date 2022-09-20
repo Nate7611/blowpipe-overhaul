@@ -2,7 +2,7 @@ using Terraria.ModLoader;
 
 namespace blowpipemod
 {
-	public class blowpipemod : Mod
-	{
-	}
+    public class blowpipemod : Mod
+    {
+    }
 }

@@ -1,7 +1,7 @@
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
 
 namespace blowpipemod.Common.GlobalTiles
 {
@@ -27,7 +27,7 @@ namespace blowpipemod.Common.GlobalTiles
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(7, 14));
             }
 
-            noItem = false;  
+            noItem = false;
         }
     }
-}   
+}

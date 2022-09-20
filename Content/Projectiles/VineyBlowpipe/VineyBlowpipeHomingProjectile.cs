@@ -1,7 +1,5 @@
-using IL.Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent;
@@ -10,93 +8,93 @@ using Terraria.ModLoader;
 
 namespace blowpipemod.Content.Projectiles.VineyBlowpipe
 {
-	public class VineyBlowpipeHomingProjectile : ModProjectile
-	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.SetDefault("Viney Homing Seed");
-			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 1;
-			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
-		}
+    public class VineyBlowpipeHomingProjectile : ModProjectile
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Viney Homing Seed");
+            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 1;
+            ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
+        }
 
-		public override void SetDefaults()
-		{
-			Projectile.width = 8;
-			Projectile.height = 8;
-			Projectile.aiStyle = 1;
-			Projectile.friendly = true;
-			Projectile.hostile = false;
-			Projectile.DamageType = DamageClass.Ranged;
-			Projectile.penetrate = 1;
-			Projectile.ignoreWater = false;
-			Projectile.tileCollide = true;
+        public override void SetDefaults()
+        {
+            Projectile.width = 8;
+            Projectile.height = 8;
+            Projectile.aiStyle = 1;
+            Projectile.friendly = true;
+            Projectile.hostile = false;
+            Projectile.DamageType = DamageClass.Ranged;
+            Projectile.penetrate = 1;
+            Projectile.ignoreWater = false;
+            Projectile.tileCollide = true;
 
-			AIType = ProjectileID.Seed;
-		}
+            AIType = ProjectileID.Seed;
+        }
 
-		public override bool OnTileCollide(Vector2 oldVelocity)
-		{
-			Projectile.Kill();
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            Projectile.Kill();
 
-			return false;
-		}
+            return false;
+        }
 
-		public override void AI()
-		{
-			float maxDetectRadius = 200f;
-			float projSpeed = 15f;
+        public override void AI()
+        {
+            float maxDetectRadius = 200f;
+            float projSpeed = 15f;
 
-			NPC closestNPC = FindClosestNPC(maxDetectRadius);
-			if (closestNPC == null) return;
+            NPC closestNPC = FindClosestNPC(maxDetectRadius);
+            if (closestNPC == null) return;
 
-			Projectile.velocity = (closestNPC.Center - Projectile.Center).SafeNormalize(Vector2.Zero) * projSpeed;
-			Projectile.rotation = Projectile.velocity.ToRotation();
-		}
+            Projectile.velocity = (closestNPC.Center - Projectile.Center).SafeNormalize(Vector2.Zero) * projSpeed;
+            Projectile.rotation = Projectile.velocity.ToRotation();
+        }
 
-		public NPC FindClosestNPC(float maxDetectDistance)
-		{
-			NPC closestNPC = null;
+        public NPC FindClosestNPC(float maxDetectDistance)
+        {
+            NPC closestNPC = null;
 
-			float sqrMaxDetectDistance = maxDetectDistance * maxDetectDistance;
+            float sqrMaxDetectDistance = maxDetectDistance * maxDetectDistance;
 
-			for (int k = 0; k < Main.maxNPCs; k++)
-			{
-				NPC target = Main.npc[k];
-				if (target.CanBeChasedBy())
-				{
-					float sqrDistanceToTarget = Vector2.DistanceSquared(target.Center, Projectile.Center);
+            for (int k = 0; k < Main.maxNPCs; k++)
+            {
+                NPC target = Main.npc[k];
+                if (target.CanBeChasedBy())
+                {
+                    float sqrDistanceToTarget = Vector2.DistanceSquared(target.Center, Projectile.Center);
 
-					if (sqrDistanceToTarget < sqrMaxDetectDistance)
-					{
-						sqrMaxDetectDistance = sqrDistanceToTarget;
-						closestNPC = target;
-					}
-				}
-			}
+                    if (sqrDistanceToTarget < sqrMaxDetectDistance)
+                    {
+                        sqrMaxDetectDistance = sqrDistanceToTarget;
+                        closestNPC = target;
+                    }
+                }
+            }
 
-			return closestNPC;
-		}
+            return closestNPC;
+        }
 
-		public override bool PreDraw(ref Color lightColor)
-		{
-			Main.instance.LoadProjectile(Projectile.type);
-			Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Main.instance.LoadProjectile(Projectile.type);
+            Texture2D texture = TextureAssets.Projectile[Projectile.type].Value;
 
-			Vector2 drawOrigin = new Vector2(texture.Width * 0.5f, Projectile.height * 0.5f);
-			for (int k = 0; k < Projectile.oldPos.Length; k++)
-			{
-				Vector2 drawPos = (Projectile.oldPos[k] - Main.screenPosition) + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
-				Color color = Projectile.GetAlpha(lightColor) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
-				Main.EntitySpriteDraw(texture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0);
-			}
+            Vector2 drawOrigin = new Vector2(texture.Width * 0.5f, Projectile.height * 0.5f);
+            for (int k = 0; k < Projectile.oldPos.Length; k++)
+            {
+                Vector2 drawPos = (Projectile.oldPos[k] - Main.screenPosition) + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
+                Color color = Projectile.GetAlpha(lightColor) * ((Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+                Main.EntitySpriteDraw(texture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0);
+            }
 
-			return true;
-		}
+            return true;
+        }
 
-		public override void Kill(int timeLeft)
-		{
-			Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
-			SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
-		}
-	}
+        public override void Kill(int timeLeft)
+        {
+            Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
+            SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
+        }
+    }
 }
