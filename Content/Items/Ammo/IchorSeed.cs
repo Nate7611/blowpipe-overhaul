@@ -11,7 +11,10 @@ namespace blowpipemod.Content.Items.Ammo
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Ichor Seed");
-            Tooltip.SetDefault("Decreases target's defense");
+            Tooltip.SetDefault("Decreases target's defense\n" +
+                "Moves increadibly fast\n" +
+                "[c/FECA50:(At the moment I recommend using ichor darts as they are more unique and better)]\n" +
+                "[c/FECA50:(I will hopefully rework these seeds soon...)]");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
         }
 
@@ -20,7 +23,7 @@ namespace blowpipemod.Content.Items.Ammo
             Item.width = 12;
             Item.height = 10;
 
-            Item.damage = 10;
+            Item.damage = 16;
             Item.DamageType = DamageClass.Ranged;
 
             Item.maxStack = 999;

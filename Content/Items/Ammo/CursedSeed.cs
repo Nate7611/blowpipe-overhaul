@@ -11,6 +11,9 @@ namespace blowpipemod.Content.Items.Ammo
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Cursed Seed");
+            Tooltip.SetDefault("Moves increadibly fast\n" +
+                "[c/60F802:(At the moment I recommend using cursed darts as they are more unique and better)]\n" +
+                "[c/60F802:(I will hopefully rework these seeds soon...)]");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
         }
 
@@ -19,7 +22,7 @@ namespace blowpipemod.Content.Items.Ammo
             Item.width = 12;
             Item.height = 10;
 
-            Item.damage = 10;
+            Item.damage = 16;
             Item.DamageType = DamageClass.Ranged;
 
             Item.maxStack = 999;

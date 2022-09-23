@@ -1,10 +1,5 @@
 Give stuff proper rarity
 Give stuff proper sell values
 Make sure all recipes make sense
-Accessories
-fix plantera spin with player.itemRotation = (float)Math.Atan2(Projectile.velocity.Y * dir, Projectile.velocity.X * dir);
 add homing seed (vortex seed)
-make icon for mod
 take screen shots of boss fights with new blowpipes for steam workshot
-add modded projectiles to music blowpipe
-make treble clef timer only tick up if there is no clef alive
