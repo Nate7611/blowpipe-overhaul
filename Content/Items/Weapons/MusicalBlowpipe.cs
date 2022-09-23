@@ -1,4 +1,4 @@
-using blowpipemod.Content.Projectiles;
+using blowpipemod.Content.Projectiles.MusicalBlowpipe;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,14 +13,13 @@ namespace blowpipemod.Content.Items.Weapons
         SoundStyle MusicalBlowpipeSoundStyle = new SoundStyle("blowpipemod/Assets/Sounds/Items/Blowpipes/MusicalBlowpipeSound_", 4);
 
         public int randomNote;
-        public int musicProjectileTimer;
 
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Musical Blowpipe");
             Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
+                "Shoots in large bursts \n" +
                 "Converts normal seeds into musical notes \n" +
-                "Periodicaly summons musical notes that will heal you on hit\n" +
                 "Does not resemble any other weapon...");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
@@ -32,13 +31,13 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 10;
             Item.useTime = 10;
             Item.useAnimation = 90;
-            Item.damage = 50;
-            Item.knockBack = 3.5f;
+            Item.damage = 45;
+            Item.knockBack = 2f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
             Item.shootSpeed = 15f;
-            Item.value = Item.buyPrice(silver: 54);
-            Item.rare = ItemRarityID.Orange;
+            Item.value = Item.buyPrice(gold: 2, silver: 54);
+            Item.rare = ItemRarityID.Pink;
             Item.UseSound = MusicalBlowpipeSoundStyle;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.shoot = ProjectileID.PurificationPowder;
@@ -48,38 +47,21 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
+            randomNote = Main.rand.Next(1, 4);
+
             if (type == ProjectileID.Seed)
             {
-                randomNote = Main.rand.Next(1, 4);
-
                 if (randomNote == 1)
                 {
-                    type = ProjectileID.EighthNote;
+                    type = ModContent.ProjectileType<QuarterNote>();
                 }
                 if (randomNote == 2)
                 {
-                    type = ProjectileID.QuarterNote;
+                    type = ModContent.ProjectileType<TiedEighthNote>();
                 }
                 if (randomNote == 3)
                 {
-                    type = ProjectileID.TiedEighthNote;
-                }
-            }
-        }
-
-        public override void HoldItem(Player player)
-        {
-            musicProjectileTimer++;
-            if (musicProjectileTimer >= 480)
-            {
-                if (BlowpipePlayer.musicProjectileSpawned == false)
-                {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.position + new Vector2(0, -80), new Vector2(0, 0), ModContent.ProjectileType<MusicalBlowpipeProjectile>(), 100, 0, player.whoAmI);
-                    musicProjectileTimer = 0;
-                }
-                else
-                {
-                    musicProjectileTimer = 0;
+                    type = ModContent.ProjectileType<EighthNote>();
                 }
             }
         }
