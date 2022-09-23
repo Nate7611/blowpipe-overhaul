@@ -1,3 +1,4 @@
+using blowpipemod.Content.Projectiles.CrystalBlowpipe;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,6 +9,8 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
 {
     public class ZenithBlowpipeProjectile : ModProjectile
     {
+        public int whichCrystal;
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Zenith Blowpipe Projectile");
@@ -29,24 +32,42 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            if (Main.rand.NextBool(12))
+            if (Main.myPlayer == Projectile.owner)
             {
-                if (Main.myPlayer == Projectile.owner)
+                whichCrystal = Main.rand.Next(1, 4);
+                if (whichCrystal == 1 && Main.rand.NextBool(3))
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 5), ModContent.ProjectileType<CrystalBlowpipeFallingBallProjectile>(), damage * 5, knockback, Main.myPlayer);
+                }
+                if (whichCrystal == 2)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 5), ModContent.ProjectileType<CrystalBlowpipeFallingSmallProjectile>(), damage * 5, knockback, Main.myPlayer);
+                }
+                if (whichCrystal == 3)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 5), ModContent.ProjectileType<CrystalBlowpipeFallingLargeProjectile>(), damage * 5, knockback, Main.myPlayer);
+                }
+
+                if (Main.rand.NextBool(12))
                 {
                     for (int i = 0; i < 6; i++)
                     {
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), damage / 3, 0, Main.myPlayer);
                     }
                 }
+
             }
 
             if (target.lifeMax >= 6)
             {
-                Player player = Main.player[Projectile.owner];
-                player.Heal(damage / 6);
-                for (int d = 0; d < 10; d++)
+                if (Main.rand.NextBool(20))
                 {
-                    Dust.NewDust(target.position, target.width, target.height, DustID.LifeDrain, 0f, 0f, 0, default(Color), 1.2f);
+                    Player player = Main.player[Projectile.owner];
+                    player.Heal(damage / 6);
+                    for (int d = 0; d < 10; d++)
+                    {
+                        Dust.NewDust(target.position, target.width, target.height, DustID.LifeDrain, 0f, 0f, 0, default(Color), 1.2f);
+                    }
                 }
             }
 

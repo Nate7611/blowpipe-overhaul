@@ -1,4 +1,5 @@
 using blowpipemod.Content.Projectiles.ZenithBlowpipe;
+using blowpipemod.Content.Projectiles.VineyBlowpipe;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
@@ -12,9 +13,11 @@ namespace blowpipemod.Content.Items.Weapons
 {
     public class ZenithBlowpipe : ModItem
     {
-        public int shotTracker = 1;
+        public int jungleShotTracker;
         public int overclockCooldown;
         public int overclockTimer;
+        public int vortexTimer;
+        public int astralTimer;
         public int coolDown = 300;
         public bool usedM2 = false;
         public bool soundPlayed = false;
@@ -25,9 +28,13 @@ namespace blowpipemod.Content.Items.Weapons
             Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
                 "[i:281]" + "[c/6ECBBD: Channels the power of every blowpipe ]" + "[i:281]" + "\n" +
                 "Summons 3 buffed astral blowpipes around the player periodically\n" +
-                "Summons 4 buffed vortex orbs around the cursor that will automatically explode after a short time\n" +
+                "Summons 2 buffed vortex orbs around the cursor that will automatically explode after a short time\n" +
+                "Summons a multi pierce jungle orb above the cursor every 8th shot\n" +
+                "Cycles through an enraged Plantera's arsenal\n" +
                 "Right click when the weapon is charged to overclock it, massively increasing fire rate at the cost of reduced damage\n" +
-                "Overclocking does NOT affect astral blowpipes");
+                "60% chance not to consume ammo\n" +
+                "Overclocking does [c/FF0000:NOT] affect astral blowpipes\n" +
+                "[c/FF0000:(Probably not balanced well, be aware if you are playing with content mods that have post moonlord content!)]");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -38,7 +45,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 12;
             Item.useTime = 25;
             Item.useAnimation = 25;
-            Item.damage = 100;
+            Item.damage = 175;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -54,6 +61,14 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
+            jungleShotTracker++;
+
+            if (jungleShotTracker == 8)
+            {
+                Projectile.NewProjectile(source, Main.MouseWorld + new Vector2(0, -75), velocity * 0, ModContent.ProjectileType<ZenithJungleOrb>(), damage * 5, knockback * 0, player.whoAmI);
+                jungleShotTracker = 0;
+            }
+
             float numberProjectiles = 3;
             float rotation = MathHelper.ToRadians((float)(Math.PI / 2));
             position += Vector2.Normalize(velocity) * 45f;
@@ -65,8 +80,34 @@ namespace blowpipemod.Content.Items.Weapons
             return false;
         }
 
+        public override bool CanConsumeAmmo(Item ammo, Player player)
+        {
+            return Main.rand.NextFloat() >= .60f;
+        }
+
         public override void HoldItem(Player player)
         {
+            BlowpipePlayer.holdingZenithBlowpipe = true;
+
+            astralTimer++;
+
+            if (astralTimer >= 1200)
+            {
+                Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<ZenithAstralBlowpipeRight>(), 100, 0, Main.myPlayer);
+                Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(0, -50), new Vector2(0, 0), ModContent.ProjectileType<ZenithAstralBlowpipeMiddle>(), 100, 0, Main.myPlayer);
+                Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(50, 0), new Vector2(0, 0), ModContent.ProjectileType<ZenithAstralBlowpipeLeft>(), 100, 0, Main.myPlayer);
+                astralTimer = -1200;
+            }
+
+            vortexTimer++;
+
+            if (vortexTimer >= 900)
+            {
+                Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(70, 0), new Vector2(0, 0), ModContent.ProjectileType<ZenithPillarLeft>(), 0, 0, Main.myPlayer);
+                Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-70, 0), new Vector2(0, 0), ModContent.ProjectileType<ZenithPillarRight>(), 0, 0, Main.myPlayer);
+                vortexTimer = -180;
+            }
+
             if (Main.mouseRight && overclockCooldown >= 780)
             {
                 SoundEngine.PlaySound(SoundID.Item25, player.position);
