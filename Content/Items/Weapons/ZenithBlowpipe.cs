@@ -14,10 +14,12 @@ namespace blowpipemod.Content.Items.Weapons
     public class ZenithBlowpipe : ModItem
     {
         public int jungleShotTracker;
+        public int planteraTracker;
         public int overclockCooldown;
         public int overclockTimer;
         public int vortexTimer;
         public int astralTimer;
+        public int planteraTimer;
         public int coolDown = 300;
         public bool usedM2 = false;
         public bool soundPlayed = false;
@@ -27,12 +29,12 @@ namespace blowpipemod.Content.Items.Weapons
             DisplayName.SetDefault("Zenith Blowpipe");
             Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
                 "[i:281]" + "[c/6ECBBD: Channels the power of every blowpipe ]" + "[i:281]" + "\n" +
-                "Summons 3 buffed astral blowpipes around the player periodically\n" +
-                "Summons 2 buffed vortex orbs around the cursor that will automatically explode after a short time\n" +
-                "Summons a multi pierce jungle orb above the cursor every 8th shot\n" +
-                "Cycles through an enraged Plantera's arsenal\n" +
-                "Right click when the weapon is charged to overclock it, massively increasing fire rate at the cost of reduced damage\n" +
-                "60% chance not to consume ammo\n" +
+                "[c/8888A0:Summons 3 buffed astral blowpipes around the player periodically]\n" +
+                "[c/22DD97:Summons 2 buffed vortex orbs around the cursor that will automatically explode after a short time]\n" +
+                "[c/6BB600:Summons a multi pierce jungle orb above the cursor every 8th shot]\n" +
+                "[c/E180CE:Cycles through an enraged Plantera's arsenal]\n" +
+                "[c/6374DB:Right click when the weapon is charged to overclock it, massively increasing fire rate at the cost of reduced damage]\n" +
+                "[c/6374DB:60% chance not to consume ammo]\n" +
                 "Overclocking does [c/FF0000:NOT] affect astral blowpipes\n" +
                 "[c/FF0000:(Probably not balanced well, be aware if you are playing with content mods that have post moonlord content!)]");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -88,6 +90,47 @@ namespace blowpipemod.Content.Items.Weapons
         public override void HoldItem(Player player)
         {
             BlowpipePlayer.holdingZenithBlowpipe = true;
+
+            planteraTimer++;
+
+            if (planteraTimer >= 600)
+            {
+                planteraTracker++;
+
+                //this code sucks... ill fix it later
+                if (planteraTracker == 1)
+                {
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(0, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(50, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-50, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(0, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(50, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-50, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 2, 0, Main.myPlayer);
+                }
+                if (planteraTracker == 2)
+                {
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -400), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipePlanteraSpawnedProjectile>(), Item.damage * 5, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -400), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipePlanteraSpawnedProjectile>(), Item.damage * 5, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, 400), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipePlanteraSpawnedProjectile>(), Item.damage * 5, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, 400), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipePlanteraSpawnedProjectile>(), Item.damage * 5, 0, Main.myPlayer);
+                }
+                if (planteraTracker == 3)
+                {
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld, new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeSpinSpawnedProjectile>(), Item.damage, 0, Main.myPlayer);
+                }
+
+                if (planteraTracker >= 3)
+                {
+                    planteraTracker = 0;
+                }
+
+                planteraTimer = 0;
+            }
+
 
             astralTimer++;
 
