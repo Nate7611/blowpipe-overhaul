@@ -2,7 +2,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
-using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -52,7 +51,7 @@ namespace blowpipemod.Content.Projectiles.MusicalBlowpipe
 
             if (Math.Abs(Projectile.velocity.X - oldVelocity.X) > float.Epsilon)
             {
-              Projectile.velocity.X = -oldVelocity.X;
+                Projectile.velocity.X = -oldVelocity.X;
             }
 
             if (Math.Abs(Projectile.velocity.Y - oldVelocity.Y) > float.Epsilon)
@@ -84,7 +83,7 @@ namespace blowpipemod.Content.Projectiles.MusicalBlowpipe
         {
             Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
 
-            for(int k = 0; k < 15; k++)
+            for (int k = 0; k < 15; k++)
             {
                 Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Shadowflame, 0f, 0f, 0, default(Color), 1.0f);
             }

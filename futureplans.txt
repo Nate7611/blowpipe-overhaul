@@ -1,0 +1,5 @@
+Next update:
+Remake code to be more optimized
+Comment all code
+Add homing seed (vortex seed)
+Rework ichor and cursed seeds

@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
 {
-    public class ZenithAstralBlowpipeLeft: ModProjectile
+    public class ZenithAstralBlowpipeLeft : ModProjectile
     {
         public int canShoot = 12;
         public int lifespan = 1200;

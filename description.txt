@@ -1,7 +1,7 @@
 Blowpipe Overhaul makes using blowpipes a viable ranger subclass throughout the entire game!
 
 + 24 new Blowpipes
-+ 6 new seed types
++ 5 new seed types
 + 1 new accessory
 + 1 new Shroomite Helmet
 

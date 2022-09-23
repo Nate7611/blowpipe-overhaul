@@ -1,5 +1,4 @@
 using blowpipemod.Content.Projectiles.CrystalBlowpipe;
-using blowpipemod.Content.Projectiles.VineyBlowpipe;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;

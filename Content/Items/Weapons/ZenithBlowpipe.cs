@@ -1,5 +1,5 @@
-using blowpipemod.Content.Projectiles.ZenithBlowpipe;
 using blowpipemod.Content.Projectiles.VineyBlowpipe;
+using blowpipemod.Content.Projectiles.ZenithBlowpipe;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
