@@ -31,7 +31,7 @@ namespace blowpipemod.Content.Items.Weapons
                 "[i:281]" + "[c/6ECBBD: Channels the power of every blowpipe ]" + "[i:281]" + "\n" +
                 "[c/8888A0:Summons 3 buffed astral blowpipes around the player periodically]\n" +
                 "[c/22DD97:Summons 2 buffed vortex orbs around the cursor that will automatically explode after a short time]\n" +
-                "[c/6BB600:Summons a multi pierce jungle orb above the cursor every 10th shot]\n" +
+                "[c/6BB600:Summons a multi pierce jungle orb above the cursor every 12th shot]\n" +
                 "[c/E180CE:Cycles through an enraged Plantera's arsenal periodically]\n" +
                 "[c/6374DB:Right click when the weapon is charged to overclock it, massively increasing fire rate at the cost of reduced damage]\n" +
                 "[c/6374DB:60% chance not to consume ammo]\n" +
@@ -65,7 +65,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             jungleShotTracker++;
 
-            if (jungleShotTracker == 10 && Main.myPlayer == player.whoAmI)
+            if (jungleShotTracker == 12 && Main.myPlayer == player.whoAmI)
             {
                 Projectile.NewProjectile(source, Main.MouseWorld + new Vector2(0, -75), velocity * 0, ModContent.ProjectileType<ZenithJungleOrb>(), damage * 5, knockback * 0, player.whoAmI);
                 jungleShotTracker = 0;

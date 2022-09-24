@@ -36,7 +36,7 @@ namespace blowpipemod.Content.Projectiles.VineyBlowpipe
         {
             if (Main.myPlayer == Projectile.owner)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<VineyBlowpipeSpinSpawnedProjectile>(), 100, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<VineyBlowpipeSpinSpawnedProjectile>(), 50, 0, Main.myPlayer);
             }
         }
 

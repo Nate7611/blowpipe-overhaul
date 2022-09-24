@@ -17,7 +17,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             DisplayName.SetDefault("Plantera's Blowpipe");
             Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-                "Converts normal seeds into viny seeds which unleash Plantera's arsenal");
+                "[c/E180CE:Converts normal seeds into viny seeds which unleash Plantera's arsenal]");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -28,7 +28,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 18;
             Item.useTime = 25;
             Item.useAnimation = 25;
-            Item.damage = 100;
+            Item.damage = 90;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;

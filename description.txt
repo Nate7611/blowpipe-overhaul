@@ -16,5 +16,10 @@ Im sorry that the sprites arent the best, im not a very good pixel artist...
 If you want to redo any of the sprites, please send them to me over discord, I would be happy to include them and credit you :)
 
 Thanks to Luckyboy726 for helping test the mod and shooting down all of my good ideas!
+Thanks to Mr. Highway for helping for making some sounds!
+
+Github - https://github.com/Nate7611/blowpipe-overhaul
+
+v0.1.1 - Some bug fixes and balance changes
 
 v0.1 - Inital release :)

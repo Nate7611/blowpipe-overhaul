@@ -20,7 +20,7 @@ namespace blowpipemod.Content.Items.Weapons
                 "Every 5 seconds a vortex orb will spawn above your head\n" +
                 "Up to 3 vortex orbs can be attached to you at the same time\n" +
                 "Right click to explode the vortex orbs into many very powerful homing seeds\n" +
-                "Right clicking will put a 13 second cooldown on orb generation\n");
+                "Right clicking will put a 5 second cooldown on orb generation\n");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
