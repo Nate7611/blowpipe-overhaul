@@ -20,6 +20,7 @@ namespace blowpipemod.Content.Items.Weapons
             Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
                 "Shoots in large bursts \n" +
                 "Converts normal seeds into musical notes \n" +
+                "25% chance to not consume ammo\n" +
                 "Does not resemble any other weapon...");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
@@ -31,7 +32,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 10;
             Item.useTime = 10;
             Item.useAnimation = 90;
-            Item.damage = 45;
+            Item.damage = 55;
             Item.knockBack = 2f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -64,6 +65,15 @@ namespace blowpipemod.Content.Items.Weapons
                     type = ModContent.ProjectileType<EighthNote>();
                 }
             }
+            else if (type == ProjectileID.IchorDart | type == ProjectileID.CrystalDart)
+            {
+                damage = (int)(damage * (1.00 - .25));
+            }
+        }
+
+        public override bool CanConsumeAmmo(Item ammo, Player player)
+        {
+            return Main.rand.NextFloat() >= .25f;
         }
 
         public override void UpdateInventory(Player player)

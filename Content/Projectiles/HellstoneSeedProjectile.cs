@@ -36,6 +36,17 @@ namespace blowpipemod.Content.Projectiles
 
         public override void AI()
         {
+            Player player = Main.player[Projectile.owner];
+
+            if (player.ZoneUnderworldHeight)
+            {
+                Projectile.penetrate = 2;
+            }
+            else
+            {
+                Projectile.penetrate = 1;
+            }
+
             Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 0, default(Color), 1.0f);
         }
 

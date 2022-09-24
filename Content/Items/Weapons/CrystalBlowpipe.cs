@@ -13,7 +13,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             DisplayName.SetDefault("Crystal Blowpipe");
             Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-                "Converts normal seeds into homing crystal seeds which rain crystals on enemies heads\n" +
+                "Converts normal seeds into homing crystal seeds which rain piercing crystals on enemies heads\n" +
                 "Using ichor and crystal darts reduce this weapons damage by 45%\n" +
                 "60% chance not to consume ammo");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -68,7 +68,7 @@ namespace blowpipemod.Content.Items.Weapons
                 .AddIngredient(ItemID.Blowpipe, 1)
                 .AddIngredient(ItemID.CrystalShard, 25)
                 .AddIngredient(ItemID.SoulofLight, 10)
-                .AddTile(TileID.Anvils)
+                .AddTile(TileID.MythrilAnvil)
                 .Register();
         }
     }

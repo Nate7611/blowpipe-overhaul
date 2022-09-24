@@ -54,7 +54,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             if (randomText == null)
             {
-                finalText = "[c/FF2525:System.NullReferenceException: Object reference not set to an instance of an object.]f";
+                finalText = "[c/FF2525:System.NullReferenceException: Object reference not set to an instance of an object.]";
             }
             else
             {
@@ -192,6 +192,7 @@ namespace blowpipemod.Content.Items.Weapons
         public override void AddRecipes()
         {
             CreateRecipe()
+                .AddIngredient(ItemID.Blowpipe, 1)
                 .AddIngredient(ItemID.HallowedBar, 15)
                 .AddIngredient(ItemID.SoulofFright, 10)
                 .AddIngredient(ItemID.SoulofMight, 10)

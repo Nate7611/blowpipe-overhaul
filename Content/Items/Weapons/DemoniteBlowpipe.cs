@@ -25,9 +25,9 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 38;
             Item.height = 12;
-            Item.useTime = 23;
-            Item.useAnimation = 23;
-            Item.damage = 17;
+            Item.useTime = 18;
+            Item.useAnimation = 18;
+            Item.damage = 26;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -63,10 +63,15 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient(ItemID.DemoniteBar, 8)
-                .AddTile(TileID.Anvils)
-                .Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.DemoniteBar, 8);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
+
+            recipe = CreateRecipe();
+            recipe.AddIngredient(ModContent.ItemType<CrimtaneBlowpipe>());
+            recipe.AddTile(TileID.DemonAltar);
+            recipe.Register();
         }
     }
 }

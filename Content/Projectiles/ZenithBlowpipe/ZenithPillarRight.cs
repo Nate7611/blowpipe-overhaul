@@ -60,7 +60,7 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
 
                 if (explodingTimer >= 180)
                 {
-                    for (int i = 0; i < 30; i++)
+                    for (int i = 0; i < 50; i++)
                     {
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center + new Vector2(Main.rand.Next(-30, 31), Main.rand.Next(-30, 31)), new Vector2(Main.rand.NextFloat(-1, 1), Main.rand.NextFloat(-1, 1)), ModContent.ProjectileType<GodlyZenithSeed>(), 120, 0, Main.myPlayer);
                     }

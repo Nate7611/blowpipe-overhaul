@@ -32,7 +32,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 12;
             Item.useTime = 22;
             Item.useAnimation = 22;
-            Item.damage = 100;
+            Item.damage = 95;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -44,6 +44,14 @@ namespace blowpipemod.Content.Items.Weapons
             Item.shoot = ProjectileID.PurificationPowder;
             Item.noMelee = true;
             Item.autoReuse = true;
+        }
+
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+        {
+            if (type == ProjectileID.IchorDart | type == ProjectileID.CrystalDart)
+            {
+                damage = (int)(damage * (1.00 - .25));
+            }
         }
 
         public override void HoldItem(Player player)
@@ -73,8 +81,6 @@ namespace blowpipemod.Content.Items.Weapons
                 }
                 Dust.NewDust(player.position, player.width, player.height, DustID.HallowedWeapons, 0f, 0f, 0, default(Color), 1.0f);
             }
-
-            BlowpipePlayer.holdingHallowedBlowpipe = true;
         }
 
         public override void UpdateInventory(Player player)

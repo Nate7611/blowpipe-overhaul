@@ -31,7 +31,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 12;
             Item.useTime = 15;
             Item.useAnimation = 15;
-            Item.damage = 85;
+            Item.damage = 165;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -76,7 +76,7 @@ namespace blowpipemod.Content.Items.Weapons
 
             if (Main.mouseRight && Main.mouseRightRelease && isPillarAlive)
             {
-                pillarTimer = -780;
+                pillarTimer = -300;
                 pillarCount = 0;
                 isPillarAlive = false;
             }
@@ -91,8 +91,8 @@ namespace blowpipemod.Content.Items.Weapons
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.HallowedBar, 12)
-                .AddTile(TileID.MythrilAnvil)
+                .AddIngredient(ItemID.FragmentVortex, 18)
+                .AddTile(TileID.LunarCraftingStation)
                 .Register();
         }
     }

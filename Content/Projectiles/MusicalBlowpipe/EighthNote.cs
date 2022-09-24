@@ -42,7 +42,7 @@ namespace blowpipemod.Content.Projectiles.MusicalBlowpipe
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            Projectile.damage = (int)(Projectile.damage * (1.00 - .05));
+            Projectile.damage = (int)(Projectile.damage * (1.00 - .13));
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

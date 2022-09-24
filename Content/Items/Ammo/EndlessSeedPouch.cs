@@ -26,7 +26,7 @@ namespace blowpipemod.Content.Items.Ammo
 
         public override void AddRecipes()
         {
-            CreateRecipe(150)
+            CreateRecipe(1)
                 .AddIngredient(ItemID.Seed, 3996)
                 .AddTile(TileID.CrystalBall)
                 .Register();

@@ -16,7 +16,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             DisplayName.SetDefault("Jungle Blowpipe");
             Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-                "Every 8th shot summons a jungle orb that locks onto enemies");
+                "Every 12th shot summons a jungle orb that locks onto enemies");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -45,9 +45,9 @@ namespace blowpipemod.Content.Items.Weapons
         {
             shotTracker++;
 
-            if (shotTracker >= 8)
+            if (shotTracker >= 12)
             {
-                Projectile.NewProjectile(source, player.position + new Vector2(0, -75), velocity * 0, ModContent.ProjectileType<JungleOrb>(), damage * 3, knockback, player.whoAmI);
+                Projectile.NewProjectile(source, player.position + new Vector2(0, -75), velocity * 0, ModContent.ProjectileType<JungleOrb>(), (int)(damage * 2.3), knockback, player.whoAmI);
                 shotTracker = 0;
             }
 

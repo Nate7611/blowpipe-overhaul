@@ -34,8 +34,8 @@ namespace blowpipemod.Content.Items.Ammo
 
         public override void AddRecipes()
         {
-            CreateRecipe(50)
-                .AddIngredient(ItemID.Seed, 50)
+            CreateRecipe(75)
+                .AddIngredient(ItemID.Seed, 75)
                 .AddRecipeGroup(RecipeGroupID.IronBar, 1)
                 .AddTile(TileID.Anvils)
                 .Register();

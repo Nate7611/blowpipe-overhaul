@@ -54,9 +54,9 @@ namespace blowpipemod.Content.Items.Weapons
         public override void AddRecipes()
         {
             CreateRecipe()
+                .AddIngredient(ItemID.Blowpipe)
                 .AddIngredient(ItemID.Bone, 80)
                 .AddIngredient(ItemID.Cobweb, 45)
-                .AddIngredient(ItemID.Blowpipe)
                 .AddTile(TileID.Anvils)
                 .Register();
         }

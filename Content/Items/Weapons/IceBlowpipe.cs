@@ -55,10 +55,10 @@ namespace blowpipemod.Content.Items.Weapons
         public override void AddRecipes()
         {
             CreateRecipe()
+                .AddIngredient(ItemID.Blowpipe)
                 .AddIngredient(ItemID.SnowBlock, 25)
                 .AddIngredient(ItemID.IceBlock, 25)
                 .AddIngredient(ItemID.IceTorch, 5)
-                .AddIngredient(ItemID.Blowpipe)
                 .AddTile(TileID.Anvils)
                 .Register();
         }

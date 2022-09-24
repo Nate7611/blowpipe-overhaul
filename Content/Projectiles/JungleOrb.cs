@@ -26,7 +26,7 @@ namespace blowpipemod.Content.Projectiles
             Projectile.light = 1f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = false;
-            Projectile.timeLeft = 600;
+            Projectile.timeLeft = 300;
         }
 
         public override void OnSpawn(Terraria.DataStructures.IEntitySource source)

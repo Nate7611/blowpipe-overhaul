@@ -54,11 +54,8 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
 
                 if (Main.mouseLeft && canShoot <= 0 && Main.myPlayer == Projectile.owner)
                 {
-                    if (BlowpipePlayer.holdingZenithBlowpipe)
-                    {
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.DirectionTo(Main.MouseWorld) * 15, ModContent.ProjectileType<ZenithAstralSeed>(), 175, 0, Main.myPlayer);
-                        canShoot = 30;
-                    }
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.DirectionTo(Main.MouseWorld) * 15, ModContent.ProjectileType<ZenithAstralSeed>(), 250, 0, Main.myPlayer);
+                    canShoot = 15;
                 }
             }
 

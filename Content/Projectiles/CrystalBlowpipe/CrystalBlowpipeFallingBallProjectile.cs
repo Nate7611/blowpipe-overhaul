@@ -27,7 +27,7 @@ namespace blowpipemod.Content.Projectiles.CrystalBlowpipe
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.light = 1f;
-            Projectile.penetrate = 1;
+            Projectile.penetrate = 2;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
             Projectile.extraUpdates = 1;

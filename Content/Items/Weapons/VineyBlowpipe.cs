@@ -104,8 +104,8 @@ namespace blowpipemod.Content.Items.Weapons
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.HellstoneBar, 17)
-                .AddTile(TileID.Anvils)
+                .AddIngredient(ItemID.PlanteraBossBag)
+                .AddTile(TileID.MythrilAnvil)
                 .Register();
         }
     }
