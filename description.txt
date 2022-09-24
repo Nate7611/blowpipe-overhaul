@@ -15,6 +15,6 @@ I will try to improve the netcode in the future to fix this.
 Im sorry that the sprites arent the best, im not a very good pixel artist...
 If you want to redo any of the sprites, please send them to me over discord, I would be happy to include them and credit you :)
 
-Thanks to Luckyboy726 for helping test the mod and shoot down all of my good ideas!
+Thanks to Luckyboy726 for helping test the mod and shooting down all of my good ideas!
 
 v0.1 - Inital release :)

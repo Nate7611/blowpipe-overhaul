@@ -88,7 +88,7 @@ namespace blowpipemod.Content.Items.Weapons
                 .AddIngredient(ItemID.CrystalShard, 20)
                 .AddIngredient(ItemID.SoulofNight, 8)
                 .AddIngredient(ItemID.SoulofSight, 15)
-                .AddTile(TileID.Anvils)
+                .AddTile(TileID.MythrilAnvil)
                 .Register();
         }
     }
