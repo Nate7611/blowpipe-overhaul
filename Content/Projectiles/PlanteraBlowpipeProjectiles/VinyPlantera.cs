@@ -4,9 +4,9 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.VineyBlowpipe
+namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
 {
-    public class VineyBlowpipePlanteraSpawnedProjectile : ModProjectile
+    public class VinyPlantera : ModProjectile
     {
         public int chargeTimer;
         public int killTimer;
@@ -15,7 +15,7 @@ namespace blowpipemod.Content.Projectiles.VineyBlowpipe
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Viney Plantera");
+            DisplayName.SetDefault("Viny Plantera");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 1;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
             Main.projFrames[Projectile.type] = 4;

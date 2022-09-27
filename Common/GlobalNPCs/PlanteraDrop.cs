@@ -12,7 +12,7 @@ namespace blowpipemod
         {
             if (npc.type == NPCID.Plantera)
             {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<VineyBlowpipe>()));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PlanteraBlowpipe>()));
             }
         }
     }

@@ -1,4 +1,4 @@
-using blowpipemod.Content.Projectiles.VineyBlowpipe;
+using blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles;
 using blowpipemod.Content.Projectiles.ZenithBlowpipe;
 using Microsoft.Xna.Framework;
 using System;
@@ -98,27 +98,27 @@ namespace blowpipemod.Content.Items.Weapons
                 //this code sucks... ill fix it later
                 if (planteraTracker == 1)
                 {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(0, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(50, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-50, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -150), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(0, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(50, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-50, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -200), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeBallSpawnedProjectile>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(0, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(50, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-50, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(0, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(50, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-50, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
                 }
                 if (planteraTracker == 2)
                 {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -400), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipePlanteraSpawnedProjectile>(), Item.damage * 5, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -400), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipePlanteraSpawnedProjectile>(), Item.damage * 5, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, 400), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipePlanteraSpawnedProjectile>(), Item.damage * 5, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, 400), new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipePlanteraSpawnedProjectile>(), Item.damage * 5, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -400), new Vector2(0, 0), ModContent.ProjectileType<VinyPlantera>(), Item.damage * 5, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -400), new Vector2(0, 0), ModContent.ProjectileType<VinyPlantera>(), Item.damage * 5, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, 400), new Vector2(0, 0), ModContent.ProjectileType<VinyPlantera>(), Item.damage * 5, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, 400), new Vector2(0, 0), ModContent.ProjectileType<VinyPlantera>(), Item.damage * 5, 0, Main.myPlayer);
                 }
                 if (planteraTracker == 3)
                 {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld, new Vector2(0, 0), ModContent.ProjectileType<VineyBlowpipeSpinSpawnedProjectile>(), Item.damage, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld, new Vector2(0, 0), ModContent.ProjectileType<VinySpinner>(), Item.damage, 0, Main.myPlayer);
                 }
 
                 if (planteraTracker >= 3)
@@ -128,7 +128,6 @@ namespace blowpipemod.Content.Items.Weapons
 
                 planteraTimer = 0;
             }
-
 
             astralTimer++;
 
@@ -209,7 +208,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<VortexBlowpipe>());
-            recipe.AddIngredient(ModContent.ItemType<VineyBlowpipe>());
+            recipe.AddIngredient(ModContent.ItemType<PlanteraBlowpipe>());
             recipe.AddIngredient(ModContent.ItemType<HallowedBlowpipe>());
             recipe.AddIngredient(ModContent.ItemType<CrystalBlowpipe>());
             recipe.AddIngredient(ModContent.ItemType<MusicalBlowpipe>());
@@ -224,7 +223,7 @@ namespace blowpipemod.Content.Items.Weapons
 
             recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<VortexBlowpipe>());
-            recipe.AddIngredient(ModContent.ItemType<VineyBlowpipe>());
+            recipe.AddIngredient(ModContent.ItemType<PlanteraBlowpipe>());
             recipe.AddIngredient(ModContent.ItemType<HallowedBlowpipe>());
             recipe.AddIngredient(ModContent.ItemType<CrystalBlowpipe>());
             recipe.AddIngredient(ModContent.ItemType<MusicalBlowpipe>());

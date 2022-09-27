@@ -1,4 +1,4 @@
-using blowpipemod.Content.Projectiles.VineyBlowpipe;
+using blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,10 +8,10 @@ using Terraria.ModLoader;
 
 namespace blowpipemod.Content.Items.Weapons
 {
-    public class VineyBlowpipe : ModItem
+    public class PlanteraBlowpipe : ModItem
     {
-        public int shotTracker;
-        public int vineySpinTimer;
+        public static int planteraShotTracker;
+        public static int vineySpinTimer;
 
         public override void SetStaticDefaults()
         {
@@ -46,46 +46,19 @@ namespace blowpipemod.Content.Items.Weapons
         {
             if (type == ProjectileID.Seed)
             {
-                if (shotTracker <= 1)
-                {
-                    type = ModContent.ProjectileType<VineyBlowpipeHomingProjectile>();
-                }
-                if (shotTracker == 2)
-                {
-                    type = ModContent.ProjectileType<VineyBlowpipeBallProjectile>();
-                }
-                if (shotTracker == 3)
-                {
-                    type = ModContent.ProjectileType<VineyBlowpipeHomingProjectile>();
-                }
-                if (shotTracker == 4)
-                {
-                    type = ModContent.ProjectileType<VineyBlowpipePlanteraProjectile>();
-                }
-                if (shotTracker == 5)
-                {
-                    if (BlowpipePlayer.vinySpinnerAlive == false)
-                    {
-                        vineySpinTimer = 360;
-                        type = ModContent.ProjectileType<VineyBlowpipeSpinProjectile>();
-                    }
-                    else
-                    {
-                        type = ModContent.ProjectileType<VineyBlowpipeHomingProjectile>();
-                        damage *= 3;
-                    }
-                }
-                if (shotTracker >= 6)
-                {
-                    type = ModContent.ProjectileType<VineyBlowpipeHomingProjectile>();
-                    shotTracker = 0;
-                }
+                type = ModContent.ProjectileType<VinySeed>();
             }
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            shotTracker++;
+            planteraShotTracker++;
+
+            if (planteraShotTracker == 7)
+            {
+                planteraShotTracker = 1;
+            }
+
             return true;
         }
 
@@ -94,11 +67,6 @@ namespace blowpipemod.Content.Items.Weapons
             BlowpipePlayer.holdingManyBlowpipe = true;
 
             vineySpinTimer--;
-
-            if (vineySpinTimer > 0)
-            {
-                BlowpipePlayer.vinySpinnerAlive = true;
-            }
         }
 
         public override void AddRecipes()

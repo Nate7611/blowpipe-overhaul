@@ -6,21 +6,21 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.VineyBlowpipe
+namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
 {
-    public class VineyBlowpipeHomingProjectile : ModProjectile
+    public class VinyBall : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Viney Homing Seed");
+            DisplayName.SetDefault("Viny Ball");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 1;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
         }
 
         public override void SetDefaults()
         {
-            Projectile.width = 8;
-            Projectile.height = 8;
+            Projectile.width = 38;
+            Projectile.height = 38;
             Projectile.aiStyle = 1;
             Projectile.friendly = true;
             Projectile.hostile = false;
@@ -28,8 +28,12 @@ namespace blowpipemod.Content.Projectiles.VineyBlowpipe
             Projectile.penetrate = 1;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
+            Projectile.extraUpdates = 1;
+        }
 
-            AIType = ProjectileID.Seed;
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            target.AddBuff(BuffID.Venom, 240);
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)
@@ -37,42 +41,6 @@ namespace blowpipemod.Content.Projectiles.VineyBlowpipe
             Projectile.Kill();
 
             return false;
-        }
-
-        public override void AI()
-        {
-            float maxDetectRadius = 200f;
-            float projSpeed = 15f;
-
-            NPC closestNPC = FindClosestNPC(maxDetectRadius);
-            if (closestNPC == null) return;
-
-            Projectile.velocity = (closestNPC.Center - Projectile.Center).SafeNormalize(Vector2.Zero) * projSpeed;
-            Projectile.rotation = Projectile.velocity.ToRotation();
-        }
-
-        public NPC FindClosestNPC(float maxDetectDistance)
-        {
-            NPC closestNPC = null;
-
-            float sqrMaxDetectDistance = maxDetectDistance * maxDetectDistance;
-
-            for (int k = 0; k < Main.maxNPCs; k++)
-            {
-                NPC target = Main.npc[k];
-                if (target.CanBeChasedBy())
-                {
-                    float sqrDistanceToTarget = Vector2.DistanceSquared(target.Center, Projectile.Center);
-
-                    if (sqrDistanceToTarget < sqrMaxDetectDistance)
-                    {
-                        sqrMaxDetectDistance = sqrDistanceToTarget;
-                        closestNPC = target;
-                    }
-                }
-            }
-
-            return closestNPC;
         }
 
         public override bool PreDraw(ref Color lightColor)

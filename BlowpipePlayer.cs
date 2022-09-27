@@ -11,17 +11,16 @@ namespace blowpipemod
         public static bool holdingGlitchedBlowpipe;
         public static bool holdingVortexBlowpipe;
         public static bool musicProjectileSpawned;
-        public static bool vinySpinnerAlive;
 
         public override void ResetEffects()
         {
             holdingManyBlowpipe = false;
             holdingMoreBlowpipe = false;
+            holdingFewBlowpipe = false;
             blockingSeeds = false;
             holdingVortexBlowpipe = false;
             musicProjectileSpawned = false;
             holdingGlitchedBlowpipe = false;
-            vinySpinnerAlive = false;
         }
     }
 }

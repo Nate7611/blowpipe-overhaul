@@ -2,15 +2,15 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.VineyBlowpipe
+namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
 {
-    public class VineyBlowpipeSpinSpawnedProjectile : ModProjectile
+    public class VinySpinner : ModProjectile
     {
         public int vineLifespan;
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Spining Vine");
+            DisplayName.SetDefault("Viny Spinner");
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 1;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
             Main.projFrames[Projectile.type] = 22;

@@ -15,27 +15,41 @@ namespace blowpipemod.Common.GlobalTiles
             {
                 if (BlowpipePlayer.holdingManyBlowpipe && type == TileID.Plants && !BlowpipePlayer.blockingSeeds)
                 {
-                    Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(7, 15));
+                    Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(8, 16));
                 }
             }
             else if (BlowpipePlayer.holdingMoreBlowpipe && BlowpipePlayer.holdingManyBlowpipe)
             {
                 if (BlowpipePlayer.holdingManyBlowpipe && type == TileID.Plants && !BlowpipePlayer.blockingSeeds)
                 {
-                    Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(7, 15));
+                    Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(8, 16));
+                }
+            }
+            else if (BlowpipePlayer.holdingFewBlowpipe && BlowpipePlayer.holdingMoreBlowpipe)
+            {
+                if (BlowpipePlayer.holdingMoreBlowpipe && type == TileID.Plants && !BlowpipePlayer.blockingSeeds)
+                {
+                    Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(4, 9));
+                }
+            }
+            else if (BlowpipePlayer.holdingFewBlowpipe && BlowpipePlayer.holdingManyBlowpipe)
+            {
+                if (BlowpipePlayer.holdingManyBlowpipe && type == TileID.Plants && !BlowpipePlayer.blockingSeeds)
+                {
+                    Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(8, 16));
                 }
             }
             else if (BlowpipePlayer.holdingMoreBlowpipe && type == TileID.Plants && !BlowpipePlayer.blockingSeeds)
             {
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(3, 7));
+                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(4, 9));
             }
             else if (BlowpipePlayer.holdingManyBlowpipe && type == TileID.Plants && !BlowpipePlayer.blockingSeeds)
             {
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(7, 15));
+                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(8, 16));
             }
             else if (BlowpipePlayer.holdingFewBlowpipe && type == TileID.Plants && !BlowpipePlayer.blockingSeeds)
             {
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(1, 4));
+                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Seed, Stack = Main.rand.Next(2, 5));
             }
 
             noItem = false;
