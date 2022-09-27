@@ -13,6 +13,7 @@ namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
     public class VinySeed : ModProjectile
     {
         private int oldShotTracker;
+        private Vector2[] ballPositions;
 
         public override void SetStaticDefaults()
         {
@@ -47,11 +48,19 @@ namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
 
             if (oldShotTracker == 2 && Main.myPlayer == Projectile.owner)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(0, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), damage, 0, Main.myPlayer);
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(50, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), damage, 0, Main.myPlayer);
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(-50, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), damage, 0, Main.myPlayer);
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(100, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), damage, 0, Main.myPlayer);
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(-100, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), damage, 0, Main.myPlayer);
+                ballPositions = new Vector2[]
+                {
+                    new Vector2(0, -150),
+                    new Vector2(50, -150),
+                    new Vector2(-50, -150),
+                    new Vector2(100, -150),
+                    new Vector2(-100, -150),
+                };
+
+                for (int d = 0; d < ballPositions.Length; d++)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + ballPositions[d], new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), damage, 0, Main.myPlayer);
+                }
             }
             if (oldShotTracker == 4 && Main.myPlayer == Projectile.owner)
             {

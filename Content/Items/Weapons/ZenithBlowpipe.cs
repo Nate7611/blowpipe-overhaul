@@ -23,6 +23,7 @@ namespace blowpipemod.Content.Items.Weapons
         public int coolDown = 300;
         public bool usedM2 = false;
         public bool soundPlayed = false;
+        private Vector2[] ballPositions;
 
         public override void SetStaticDefaults()
         {
@@ -47,7 +48,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 16;
             Item.useTime = 22;
             Item.useAnimation = 22;
-            Item.damage = 375;
+            Item.damage = 400;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -95,19 +96,22 @@ namespace blowpipemod.Content.Items.Weapons
             {
                 planteraTracker++;
 
-                //this code sucks... ill fix it later
                 if (planteraTracker == 1)
                 {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(0, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(50, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-50, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -150), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(0, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(50, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-50, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(100, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + new Vector2(-100, -200), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    ballPositions = new Vector2[]
+                    {
+                        new Vector2(0, -150),
+                        new Vector2(50, -150),
+                        new Vector2(-50, -150),
+                        new Vector2(100, -150),
+                        new Vector2(-100, -150),
+                    };
+
+                    for (int d = 0; d < ballPositions.Length; d++)
+                    {
+                        Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + ballPositions[d], new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                        Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), Main.MouseWorld + ballPositions[d] + new Vector2(0, -50), new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), Item.damage * 3, 0, Main.myPlayer);
+                    }
                 }
                 if (planteraTracker == 2)
                 {
