@@ -48,6 +48,10 @@ namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
             if (oldShotTracker == 2 && Main.myPlayer == Projectile.owner)
             {
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(0, -150), Projectile.velocity * 0, ModContent.ProjectileType<VinyBall>(), damage, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(50, -150), Projectile.velocity * 0, ModContent.ProjectileType<VinyBall>(), Projectile.damage, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(-50, -150), Projectile.velocity * 0, ModContent.ProjectileType<VinyBall>(), Projectile.damage, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(100, -150), Projectile.velocity * 0, ModContent.ProjectileType<VinyBall>(), Projectile.damage, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(-100, -150), Projectile.velocity * 0, ModContent.ProjectileType<VinyBall>(), Projectile.damage, 0, Main.myPlayer);
             }
             if (oldShotTracker == 4 && Main.myPlayer == Projectile.owner)
             {
