@@ -33,7 +33,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 12;
             Item.useTime = 22;
             Item.useAnimation = 22;
-            Item.damage = 95;
+            Item.damage = 92;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;

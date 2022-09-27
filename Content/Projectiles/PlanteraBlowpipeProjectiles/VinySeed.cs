@@ -59,16 +59,16 @@ namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
 
                 for (int d = 0; d < ballPositions.Length; d++)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + ballPositions[d], new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), damage, 0, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + ballPositions[d], new Vector2(0, 0), ModContent.ProjectileType<VinyBall>(), damage * 3, 0, Main.myPlayer);
                 }
             }
             if (oldShotTracker == 4 && Main.myPlayer == Projectile.owner)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center + new Vector2(0, -300), new Vector2(0, 0), ModContent.ProjectileType<VinyPlantera>(), damage * 4, knockback, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center + new Vector2(0, -300), new Vector2(0, 0), ModContent.ProjectileType<VinyPlantera>(), damage * 3, knockback, Main.myPlayer);
             }
             if (oldShotTracker == 6 && Main.myPlayer == Projectile.owner && PlanteraBlowpipe.vineySpinTimer <= 0)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, new Vector2(0, 0), ModContent.ProjectileType<VinySpinner>(), 85, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, new Vector2(0, 0), ModContent.ProjectileType<VinySpinner>(), damage, 0, Main.myPlayer);
                 PlanteraBlowpipe.vineySpinTimer = 600;
             }
         }

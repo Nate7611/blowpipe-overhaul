@@ -52,7 +52,7 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
                 Projectile.Center = player.Center + new Vector2(50, 0);
                 Projectile.rotation = Projectile.Center.AngleTo(Main.MouseWorld);
 
-                if (Main.mouseLeft && canShoot <= 0 && Main.myPlayer == Projectile.owner) 
+                if (Main.mouseLeft && canShoot <= 0 && Main.myPlayer == Projectile.owner)
                 {
                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.DirectionTo(Main.MouseWorld) * 15, ModContent.ProjectileType<ZenithAstralSeed>(), 250, 0, Main.myPlayer);
                     canShoot = 15;
