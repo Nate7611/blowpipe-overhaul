@@ -1,14 +1,16 @@
+using blowpipemod.Content.Content.blowpipemod.Content.Items.Weapons;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
+namespace blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles
 {
-    public class AstralBlowpipeRight : ModProjectile
+    public class AstralBlowpipe : ModProjectile
     {
-        public int canShoot = 30;
-        public int lifespan = 1200;
+        private int oldAstralCount;
+        private int canShoot = 30;
+        private int lifespan = 1200;
 
         public override void SetStaticDefaults()
         {
@@ -32,6 +34,8 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
 
         public override void OnSpawn(Terraria.DataStructures.IEntitySource source)
         {
+            oldAstralCount = AstralBlowpipe.astralCount;
+
             for (int d = 0; d < 15; d++)
             {
                 Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Cloud, 0f, 0f, 0, default(Color), 1.2f);
@@ -49,7 +53,20 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
                 canShoot--;
 
                 Player player = Main.player[Projectile.owner];
-                Projectile.Center = player.Center + new Vector2(-50, 0);
+
+                if (oldAstralCount == 0)
+                {
+                    Projectile.Center = player.Center + new Vector2(0, -50);
+                }
+                if (oldAstralCount == 1)
+                {
+                    Projectile.Center = player.Center + new Vector2(50, 0);
+                }
+                if (oldAstralCount == 2)
+                {
+                    Projectile.Center = player.Center + new Vector2(-50, 0);
+                }
+
                 Projectile.rotation = Projectile.Center.AngleTo(Main.MouseWorld);
 
                 if (Main.mouseLeft && canShoot <= 0 && Main.myPlayer == Projectile.owner)

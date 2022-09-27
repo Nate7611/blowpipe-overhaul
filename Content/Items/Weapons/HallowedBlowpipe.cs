@@ -1,4 +1,4 @@
-using blowpipemod.Content.Projectiles.HallowedBlowpipe;
+using blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -10,10 +10,11 @@ namespace blowpipemod.Content.Items.Weapons
 {
     public class HallowedBlowpipe : ModItem
     {
-        public int summonTimer;
-        public int coolDown = 1200;
-        public bool usedM2 = false;
-        public bool soundPlayed = false;
+        public static int astralCount;
+        private int summonTimer;
+        private int coolDown = 1200;
+        private bool usedM2 = false;
+        private bool soundPlayed = false;
 
         public override void SetStaticDefaults()
         {
@@ -59,9 +60,25 @@ namespace blowpipemod.Content.Items.Weapons
             if (Main.mouseRight && summonTimer >= 900 && Main.myPlayer == player.whoAmI)
             {
                 SoundEngine.PlaySound(SoundID.Item25, player.position);
-                Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<AstralBlowpipeRight>(), 100, 0, Main.myPlayer);
-                Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(0, -50), new Vector2(0, 0), ModContent.ProjectileType<AstralBlowpipeMiddle>(), 100, 0, Main.myPlayer);
-                Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(50, 0), new Vector2(0, 0), ModContent.ProjectileType<AstralBlowpipeLeft>(), 100, 0, Main.myPlayer);
+
+                if (astralCount == 0)
+                {
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(0, -50), new Vector2(0, 0), ModContent.ProjectileType<AstralBlowpipe>(), 100, 0, Main.myPlayer);
+                    astralCount++;
+                }
+
+                if (astralCount == 1)
+                {
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(50, 0), new Vector2(0, 0), ModContent.ProjectileType<AstralBlowpipe>(), 100, 0, Main.myPlayer);
+                    astralCount++;
+                }
+
+                if (astralCount == 2)
+                {
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<AstralBlowpipe>(), 100, 0, Main.myPlayer);
+                    astralCount = 0;
+                }
+
                 usedM2 = true;
                 soundPlayed = false;
                 summonTimer = 0;

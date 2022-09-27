@@ -30,12 +30,7 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipeProjectiles
             Projectile.timeLeft = 1200;
 
             AIType = ProjectileID.Seed;
-        }
-
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-        {
-
-        }
+        }s
 
         public override void AI()
         {
