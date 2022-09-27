@@ -1,3 +1,4 @@
+using blowpipemod.Content.Items.Weapons;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -66,11 +67,11 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipeProjectiles
                 }
                 else if (oldPillarCount == 2)
                 {
-                    Projectile.Center = player.Center + new Vector2(80, 0);
+                    Projectile.Center = player.Center + new Vector2(-80, 0);
                 }
                 else
                 {
-                    Projectile.Center = player.Center + new Vector2(-80, 0);
+                    Projectile.Center = player.Center + new Vector2(80, 0);
                 }
 
                 if (Main.mouseRight && Main.mouseRightRelease && !exploding)
