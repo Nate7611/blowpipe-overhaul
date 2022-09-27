@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
+namespace blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles
 {
     public class AstralSeed : ModProjectile
     {

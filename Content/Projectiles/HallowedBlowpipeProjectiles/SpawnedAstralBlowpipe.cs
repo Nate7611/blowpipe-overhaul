@@ -1,4 +1,4 @@
-using blowpipemod.Content.Content.blowpipemod.Content.Items.Weapons;
+using blowpipemod.Content.Items.Weapons;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles
 {
-    public class AstralBlowpipe : ModProjectile
+    public class SpawnedAstralBlowpipe : ModProjectile
     {
         private int oldAstralCount;
         private int canShoot = 30;
@@ -34,7 +34,7 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles
 
         public override void OnSpawn(Terraria.DataStructures.IEntitySource source)
         {
-            oldAstralCount = AstralBlowpipe.astralCount;
+            oldAstralCount = HallowedBlowpipe.astralCount;
 
             for (int d = 0; d < 15; d++)
             {

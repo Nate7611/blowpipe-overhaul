@@ -1,4 +1,4 @@
-using blowpipemod.Content.Projectiles.HallowedBlowpipe;
+using blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;

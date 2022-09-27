@@ -3,7 +3,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.HallowedBlowpipe
+namespace blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles
 {
     public class Explosion : ModProjectile
     {
