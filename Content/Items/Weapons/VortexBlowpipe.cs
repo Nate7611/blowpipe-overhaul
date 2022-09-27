@@ -1,4 +1,4 @@
-using blowpipemod.Content.Projectiles.VortexBlowpipe;
+using blowpipemod.Content.Projectiles.VortexBlowpipeProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -9,9 +9,9 @@ namespace blowpipemod.Content.Items.Weapons
 {
     public class VortexBlowpipe : ModItem
     {
-        public int pillarTimer;
-        public int pillarCount = 0;
-        public bool isPillarAlive = false;
+        private int pillarTimer;
+        public static int pillarCount = 0;
+        private bool isPillarAlive = false;
 
         public override void SetStaticDefaults()
         {
@@ -60,11 +60,11 @@ namespace blowpipemod.Content.Items.Weapons
                 }
                 else if (pillarCount == 2)
                 {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-80, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillarRight>(), 0, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-80, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillar>(), 0, 0, Main.myPlayer);
                 }
                 else if (pillarCount == 3)
                 {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(80, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillarLeft>(), 0, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(80, 0), new Vector2(0, 0), ModContent.ProjectileType<VortexPillar>(), 0, 0, Main.myPlayer);
                 }
                 else
                 {
@@ -84,7 +84,6 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void UpdateInventory(Player player)
         {
-            BlowpipePlayer.holdingVortexBlowpipe = true;
             BlowpipePlayer.holdingManyBlowpipe = true;
         }
 

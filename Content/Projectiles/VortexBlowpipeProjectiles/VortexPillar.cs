@@ -4,11 +4,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.VortexBlowpipe
+namespace blowpipemod.Content.Projectiles.VortexBlowpipeProjectiles
 {
-    public class VortexPillarLeft : ModProjectile
+    public class VortexPillar : ModProjectile
     {
-        public bool exploding = false;
+        private bool exploding = false;
+        private int oldPillarCount;
 
         public override void SetStaticDefaults()
         {
@@ -35,6 +36,8 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipe
 
         public override void OnSpawn(Terraria.DataStructures.IEntitySource source)
         {
+            oldPillarCount = VortexBlowpipe.pillarCount;
+
             SoundEngine.PlaySound(SoundID.Item4, Projectile.position);
             for (int d = 0; d < 15; d++)
             {
@@ -56,7 +59,19 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipe
             if (Main.myPlayer == Projectile.owner)
             {
                 Player player = Main.player[Projectile.owner];
-                Projectile.Center = player.Center + new Vector2(80, 0);
+
+                if (oldPillarCount == 1)
+                {
+                    Projectile.Center = player.Center + new Vector2(0, -80);
+                }
+                else if (oldPillarCount == 2)
+                {
+                    Projectile.Center = player.Center + new Vector2(80, 0);
+                }
+                else
+                {
+                    Projectile.Center = player.Center + new Vector2(-80, 0);
+                }
 
                 if (Main.mouseRight && Main.mouseRightRelease && !exploding)
                 {

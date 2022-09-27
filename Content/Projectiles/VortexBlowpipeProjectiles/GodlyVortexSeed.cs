@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.VortexBlowpipe
+namespace blowpipemod.Content.Projectiles.VortexBlowpipeProjectiles
 {
     public class GodlyVortexSeed : ModProjectile
     {

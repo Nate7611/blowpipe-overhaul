@@ -9,7 +9,6 @@ namespace blowpipemod
         public static bool holdingManyBlowpipe;
         public static bool blockingSeeds;
         public static bool holdingGlitchedBlowpipe;
-        public static bool holdingVortexBlowpipe;
         public static bool musicProjectileSpawned;
 
         public override void ResetEffects()
@@ -18,7 +17,6 @@ namespace blowpipemod
             holdingMoreBlowpipe = false;
             holdingFewBlowpipe = false;
             blockingSeeds = false;
-            holdingVortexBlowpipe = false;
             musicProjectileSpawned = false;
             holdingGlitchedBlowpipe = false;
         }
