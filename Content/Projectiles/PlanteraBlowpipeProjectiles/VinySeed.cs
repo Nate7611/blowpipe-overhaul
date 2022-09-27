@@ -55,7 +55,7 @@ namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
             }
             if (oldShotTracker == 4 && Main.myPlayer == Projectile.owner)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center + new Vector2(0, -300), new Vector2(0, 0), ModContent.ProjectileType<VinyPlantera>(), damage * 4, knockback, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center + new Vector2(0, -300), new Vector2(0, 0), ModContent.ProjectileType<VinyPlantera>(), (int)(damage * 3.5), knockback, Main.myPlayer);
             }
             if (oldShotTracker == 6 && Main.myPlayer == Projectile.owner && PlanteraBlowpipe.vineySpinTimer <= 0)
             {

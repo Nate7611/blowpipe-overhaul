@@ -16,7 +16,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             DisplayName.SetDefault("Crimtane Blowpipe");
             Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-                "Every third shot will shoot a seed that heal's you on impact");
+                "Every fourth shot will shoot a seed that heal's you on impact");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -50,7 +50,7 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if (shotTracker >= 3)
+            if (shotTracker >= 4)
             {
                 type = ModContent.ProjectileType<CrimtaneBlowpipeProjectile>();
                 shotTracker = 0;

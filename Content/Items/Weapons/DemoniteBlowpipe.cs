@@ -16,7 +16,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             DisplayName.SetDefault("Demonite Blowpipe");
             Tooltip.SetDefault("Allows the collection of many seeds for ammo\n" +
-                "Every third shot will shoot a homing seed");
+                "Every third shot will shoot a stronger homing seed");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -27,7 +27,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 12;
             Item.useTime = 18;
             Item.useAnimation = 18;
-            Item.damage = 26;
+            Item.damage = 24;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -52,6 +52,7 @@ namespace blowpipemod.Content.Items.Weapons
             if (shotTracker >= 3)
             {
                 type = ModContent.ProjectileType<DemoniteBlowpipeProjectile>();
+                damage *= 2;
                 shotTracker = 0;
             }
         }
