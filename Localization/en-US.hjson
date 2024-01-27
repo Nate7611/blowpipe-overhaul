@@ -1,0 +1,322 @@
+Mods: {
+	blowpipemod: {
+		Items: {
+			SeedStopper: {
+				DisplayName: Seed Stopper
+				Tooltip: Stops the collection of seeds while in your inventory
+			}
+
+			CursedSeed: {
+				DisplayName: Cursed Seed
+				Tooltip:
+					'''
+					Moves increadibly fast
+					[c/60F802:(At the moment I recommend using cursed darts as they are more unique and better)]
+					[c/60F802:(I will hopefully rework these seeds soon...)]
+					'''
+			}
+
+			EndlessSeedPouch: {
+				DisplayName: Endless Seed Pouch
+				Tooltip: ""
+			}
+
+			HardenedSeed: {
+				DisplayName: Hardened Seed
+				Tooltip: ""
+			}
+
+			IchorSeed: {
+				DisplayName: Ichor Seed
+				Tooltip:
+					'''
+					Decreases target's defense
+					Moves increadibly fast
+					[c/FECA50:(At the moment I recommend using ichor darts as they are more unique and better)]
+					[c/FECA50:(I will hopefully rework these seeds soon...)]
+					'''
+			}
+
+			SlimeySeed: {
+				DisplayName: Slimy Seed
+				Tooltip:
+					'''
+					Has a certain bouncy quality to it
+					Can pierce 1 enemy if it's the first thing it hits
+					'''
+			}
+
+			ShroomiteHelm: {
+				DisplayName: Shroomite Helm
+				Tooltip:
+					'''
+					15% increased seed damage
+					5% increased ranged critical strike chance
+					'''
+			}
+
+			AdamantiteBlowpipe: {
+				DisplayName: Adamantite Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Shoots 3 projectiles at the same time
+					'''
+			}
+
+			CrimtaneBlowpipe: {
+				DisplayName: Crimtane Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Every fourth shot will shoot a seed that heal's you on impact
+					'''
+			}
+
+			CrystalBlowpipe: {
+				DisplayName: Crystal Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Converts normal seeds into homing crystal seeds which rain piercing crystals on enemies heads
+					Using ichor and crystal darts reduce this weapons damage by 45%
+					60% chance not to consume ammo
+					'''
+			}
+
+			DemoniteBlowpipe: {
+				DisplayName: Demonite Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Every third shot will shoot a stronger homing seed
+					'''
+			}
+
+			GlitchedBlowpipe: {
+				DisplayName: Glitched Blowpipe
+				Tooltip:
+					'''
+					??? ranged damage
+					??? critical strike chance
+					??? speed
+					??? knockback
+					Allows the collection of ??? seeds for ammo
+					'''
+			}
+
+			GoldBlowpipe: {
+				DisplayName: Gold Blowpipe
+				Tooltip: Allows the collection of many seeds for ammo
+			}
+
+			HallowedBlowpipe: {
+				DisplayName: Hallowed Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Right click after this weapon is charged to summon 3 astral blowpipes around your player
+					Astral blowpipes will shoot homing seeds which explode on impact
+					The power of the astral blowpipes will need to be recharged after a short time
+					'''
+			}
+
+			HellstoneBlowpipe: {
+				DisplayName: Hellstone Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Converts normal seeds to fiery seeds which inflicts Hellfire and moves faster
+					While in the underworld, fiery seeds get +1 peirce
+					'''
+			}
+
+			IceBlowpipe: {
+				DisplayName: Ice Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Converts normal seeds to ice seeds which deal more damage and inflict frostburn
+					'''
+			}
+
+			IronBlowpipe: {
+				DisplayName: Iron Blowpipe
+				Tooltip: Allows the collection of more seeds for ammo
+			}
+
+			JungleBlowpipe: {
+				DisplayName: Jungle Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Every 12th shot summons a jungle orb that locks onto enemies
+					'''
+			}
+
+			LeadBlowpipe: {
+				DisplayName: Lead Blowpipe
+				Tooltip: Allows the collection of more seeds for ammo
+			}
+
+			MusicalBlowpipe: {
+				DisplayName: Musical Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Shoots in large bursts 
+					Converts normal seeds into musical notes 
+					25% chance to not consume ammo
+					Does not resemble any other weapon...
+					'''
+			}
+
+			MythrilBlowpipe: {
+				DisplayName: Mythril Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Shoots 2 projectiles at the same time
+					'''
+			}
+
+			NecroBlowpipe: {
+				DisplayName: Necro Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Converts normal seeds to fragile seeds which have a chance to split on impact
+					'''
+			}
+
+			OrichalcumBlowpipe: {
+				DisplayName: Orichalcum Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Shoots 2 projectiles at the same time
+					'''
+			}
+
+			PlanteraBlowpipe: {
+				DisplayName: Plantera's Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					[c/E180CE:Converts normal seeds into viny seeds which unleash Plantera's arsenal]
+					'''
+			}
+
+			PlatinumBlowpipe: {
+				DisplayName: Platinum Blowpipe
+				Tooltip: Allows the collection of many seeds for ammo
+			}
+
+			SilverBlowpipe: {
+				DisplayName: Silver Blowpipe
+				Tooltip: Allows the collection of more seeds for ammo
+			}
+
+			TitaniumBlowpipe: {
+				DisplayName: Titanium Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Shoots 3 projectiles at the same time
+					'''
+			}
+
+			TungstenBlowpipe: {
+				DisplayName: Tungsten Blowpipe
+				Tooltip: Allows the collection of more seeds for ammo
+			}
+
+			VortexBlowpipe: {
+				DisplayName: Vortex Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					Every 5 seconds a vortex orb will spawn above your head
+					Up to 3 vortex orbs can be attached to you at the same time
+					Right click to explode the vortex orbs into many very powerful homing seeds
+					Right clicking will put a 5 second cooldown on orb generation
+
+					'''
+			}
+
+			WoodenBlowpipe: {
+				DisplayName: Wooden Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of few seeds for ammo
+					I mean, it works....
+					'''
+			}
+
+			ZenithBlowpipe: {
+				DisplayName: Zenith Blowpipe
+				Tooltip:
+					'''
+					Allows the collection of many seeds for ammo
+					[i:281][c/6ECBBD: Channels the power of every blowpipe ][i:281]
+					[c/8888A0:Summons 3 buffed astral blowpipes around the player periodically]
+					[c/22DD97:Summons 2 buffed vortex orbs around the cursor that will automatically explode after a short time]
+					[c/6BB600:Summons a multi pierce jungle orb above the cursor every 12th shot]
+					[c/E180CE:Cycles through an enraged Plantera's arsenal periodically]
+					[c/6374DB:Right click when the weapon is charged to overclock it, massively increasing fire rate at the cost of reduced damage]
+					[c/6374DB:60% chance not to consume ammo]
+					Overclocking does [c/FF0000:NOT] affect astral blowpipes
+					[c/FF0000:(Probably not balanced well, be aware if you are playing with content mods that have post moonlord content!)]
+					'''
+			}
+
+			BlizzardBlowpipe: {
+				DisplayName: Blizzard Blowpipe
+				Tooltip: Slow fire rate but high damage
+			}
+		}
+
+		Projectiles: {
+			CrimtaneBlowpipeProjectile.DisplayName: Crimtane Seed
+			CrystalBlowpipeFallingBallProjectile.DisplayName: Crystal Falling Ball Seed
+			CrystalBlowpipeFallingLargeProjectile.DisplayName: Crystal Falling Large Seed
+			CrystalBlowpipeFallingSmallProjectile.DisplayName: Crystal Falling Small Seed
+			CrystalBlowpipeHomingProjectile.DisplayName: Crystal Homing Seed
+			CursedSeedProjectile.DisplayName: Cursed Seed
+			DemoniteBlowpipeProjectile.DisplayName: Demonite Blowpipe Projectile
+			FragileSeedProjectile.DisplayName: Fragile Seed
+			FragileSeedSegment.DisplayName: Fragile Seed Segment
+			GlitchedProjectile.DisplayName: Glitched Seed
+			AstralSeed.DisplayName: Astral Seed
+			Explosion.DisplayName: Explosion
+			SpawnedAstralBlowpipe.DisplayName: Astral Blowpipe
+			HardenedSeedProjectile.DisplayName: Hardened Seed
+			HellstoneSeedProjectile.DisplayName: Hellstone Seed
+			IceSeedProjectile.DisplayName: Ice Seed
+			IchorSeedProjectile.DisplayName: Ichor Seed
+			JungleOrb.DisplayName: Jungle Orb
+			EighthNote.DisplayName: Music Note
+			QuarterNote.DisplayName: Music Note
+			TiedEighthNote.DisplayName: Music Note
+			VinyBall.DisplayName: Viny Ball
+			VinyPlantera.DisplayName: Viny Plantera
+			VinySeed.DisplayName: Viny Seed
+			VinySpinner.DisplayName: Viny Spinner
+			SlimeySeedProjectile.DisplayName: Slimy Seed
+			GodlyVortexSeed.DisplayName: Godly Vortex Seed
+			VortexPillar.DisplayName: Vortex orb
+			GodlyZenithSeed.DisplayName: Godly Zenith Seed
+			ZenithAstralBlowpipeLeft.DisplayName: Zenith Astral Blowpipe
+			ZenithAstralBlowpipeMiddle.DisplayName: Zenith Astral Blowpipe
+			ZenithAstralBlowpipeRight.DisplayName: Zenith Astral Blowpipe
+			ZenithAstralSeed.DisplayName: Zenith Astral Seed
+			ZenithBlowpipeProjectile.DisplayName: Zenith Blowpipe Projectile
+			ZenithJungleOrb.DisplayName: Zenith Jungle Orb
+			ZenithPillarLeft.DisplayName: Buffed Vortex orb
+			ZenithPillarRight.DisplayName: Buffed Vortex orb
+			Numbers.DisplayName: Blizzard Numbers
+			BlizzardSeedProjectile.DisplayName: Blizzard Seed Projectile
+			IceSpike.DisplayName: Ice Spike
+		}
+	}
+}
