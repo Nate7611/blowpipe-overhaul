@@ -12,7 +12,6 @@ namespace blowpipemod.Content.Items.Weapons
 {
     public class GlitchedBlowpipe : ModItem
     {
-        public int randomSound;
         public int randomTextAssigner;
         public int randomUse;
         public string finalText;
@@ -28,8 +27,8 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 39;
             Item.height = 23;
-            Item.useTime = 22;
-            Item.useAnimation = 22;
+            Item.useTime = 15;
+            Item.useAnimation = 15;
             Item.damage = 0;
             Item.knockBack = 0;
             Item.crit = 0;
@@ -37,7 +36,6 @@ namespace blowpipemod.Content.Items.Weapons
             Item.shootSpeed = 15f;
             Item.value = Item.buyPrice(gold: 1, silver: 70);
             Item.rare = ItemRarityID.LightRed;
-            Item.UseSound = SoundID.Item63;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.shoot = ProjectileID.PurificationPowder;
             Item.noMelee = true;
@@ -62,65 +60,22 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            randomSound = Main.rand.Next(1, 11);
-
-            if (randomSound == 1)
-            {
-                Item.UseSound = SoundID.Item63;
-            }
-            if (randomSound == 2)
-            {
-                Item.UseSound = SoundID.Item11;
-            }
-            if (randomSound == 3)
-            {
-                Item.UseSound = SoundID.Item23;
-            }
-            if (randomSound == 4)
-            {
-                Item.UseSound = SoundID.Item40;
-            }
-            if (randomSound == 5)
-            {
-                Item.UseSound = SoundID.Item33;
-            }
-            if (randomSound == 6)
-            {
-                Item.UseSound = SoundID.Item59;
-            }
-            if (randomSound == 7)
-            {
-                Item.UseSound = SoundID.Item58;
-            }
-            if (randomSound == 8)
-            {
-                Item.UseSound = SoundID.Item75;
-            }
-            if (randomSound == 9)
-            {
-                Item.UseSound = SoundID.Item99;
-            }
-            if (randomSound == 10)
-            {
-                Item.UseSound = SoundID.Item108;
-            }
-
-            randomUse = Main.rand.Next(1, 51);
+            randomUse = Main.rand.Next(18, 32);
 
             Item.useTime = randomUse;
             Item.useAnimation = randomUse;
 
-            Item.crit = Main.rand.Next(1, 41);
+            Item.crit = Main.rand.Next(0, 5);
 
             Item.shootSpeed = Main.rand.Next(1, 16);
 
-            float numberProjectiles = Main.rand.Next(2, 11);
+            float numberProjectiles = Main.rand.Next(1, 12);
             float rotation = MathHelper.ToRadians((float)(Math.PI / 2));
             position += Vector2.Normalize(velocity) * 45f;
             for (int i = 0; i < numberProjectiles; i++)
             {
                 Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * 1f;
-                Projectile.NewProjectile(source, position, perturbedSpeed, ModContent.ProjectileType<GlitchedProjectile>(), Main.rand.Next(1, 351), Main.rand.Next(1, 16), player.whoAmI);
+                Projectile.NewProjectile(source, position, perturbedSpeed, ModContent.ProjectileType<GlitchedProjectile>(), Main.rand.Next(1, 89), Main.rand.Next(1, 16), player.whoAmI);
             }
             return false;
         }

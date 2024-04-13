@@ -10,7 +10,7 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles
     {
         private int oldAstralCount;
         private int canShoot = 30;
-        private int lifespan = 1200;
+        private int lifespan = 800;
 
         public override void SetStaticDefaults()
         {
@@ -70,7 +70,7 @@ namespace blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles
 
                 if (Main.mouseLeft && canShoot <= 0 && Main.myPlayer == Projectile.owner)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.DirectionTo(Main.MouseWorld) * 15, ModContent.ProjectileType<AstralSeed>(), 60, 0, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.DirectionTo(Main.MouseWorld) * 15, ModContent.ProjectileType<AstralSeed>(), 29, 0, Main.myPlayer);
                     canShoot = 30;
                 }
             }

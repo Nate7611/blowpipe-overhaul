@@ -24,7 +24,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 8;
             Item.useTime = 22;
             Item.useAnimation = 22;
-            Item.damage = 20;
+            Item.damage = 17;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -44,12 +44,21 @@ namespace blowpipemod.Content.Items.Weapons
 
             if (shotTracker >= 12)
             {
-                Projectile.NewProjectile(source, player.position + new Vector2(0, -75), velocity * 0, ModContent.ProjectileType<JungleOrb>(), (int)(damage * 2.3), knockback, player.whoAmI);
+                Projectile.NewProjectile(source, player.position + new Vector2(0, -75), velocity * 0, ModContent.ProjectileType<JungleOrb>(), (int)(damage * 2), knockback, player.whoAmI);
                 shotTracker = 0;
             }
 
             return true;
         }
+
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+        {
+            if (type == ProjectileID.IchorDart || type == ProjectileID.CrystalDart || type == ProjectileID.CursedDart || type == ProjectileID.PoisonDartBlowgun)
+            {
+                damage = (int)(damage * (1.00 - 0.27));
+            }
+        }
+
 
         public override void UpdateInventory(Player player)
         {

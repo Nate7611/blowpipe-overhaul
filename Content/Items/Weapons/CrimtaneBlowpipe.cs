@@ -22,9 +22,9 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 38;
             Item.height = 12;
-            Item.useTime = 14;
-            Item.useAnimation = 14;
-            Item.damage = 16;
+            Item.useTime = 27;
+            Item.useAnimation = 27;
+            Item.damage = 18;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -47,10 +47,15 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if (shotTracker >= 4)
+            if (shotTracker >= 8)
             {
                 type = ModContent.ProjectileType<CrimtaneBlowpipeProjectile>();
                 shotTracker = 0;
+            }
+
+            if (type == ProjectileID.IchorDart || type == ProjectileID.CrystalDart || type == ProjectileID.CursedDart || type == ProjectileID.PoisonDartBlowgun)
+            {
+                damage = (int)(damage * (1.00 - 0.27));
             }
         }
 

@@ -35,7 +35,7 @@ namespace blowpipemod.Content.Projectiles.BlizzardBlowpipe
 
         public override void AI()
         {
-            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.IchorTorch, 0f, 0f, 0, default(Color), 1.0f);
+            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, 0f, 0f, 0, default(Color), 1.0f);
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
@@ -48,7 +48,7 @@ namespace blowpipemod.Content.Projectiles.BlizzardBlowpipe
 
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
-            BlowpipePlayer.blizzardCounter = 0;
+            BlowpipePlayer.blizzardCounter -= 1;
 
             return true;
         }

@@ -1,24 +1,26 @@
 Blowpipe Overhaul makes using blowpipes a viable ranger subclass throughout the entire game!
 
-+ 24 new Blowpipes
++ 25 new Blowpipes
 + 3 new seed types
 + 1 new accessory
 + 1 new Shroomite Helmet
 
 Blowpipe Overhaul also makes the original Blowpipe craftable and makes the Dryad sell seeds. 
 
-If you have any suggestions/issues please let me know in the comments or contact me on discord (Nate#2982)
+If you have any suggestions/issues please let me know in the comments or contact me on discord (nate7688)
 
-Right now some dust and sound from weapons may not show for everyone in multiplayer; however, everything is still perfectly functional.
-I will try to improve the netcode in the future to fix this.
+Right now some dust and sounds from weapons may not show for everyone in multiplayer; however, everything is still perfectly functional.
+I might try to improve the netcode in the future to fix this.
 
-Im sorry that the sprites arent the best, im not a very good pixel artist...
+The sprites are not the best as I'm not a very good pixel artist...
 If you want to redo any of the sprites, please send them to me over discord, I would be happy to include them and credit you :)
 
 Thanks to Luckyboy726 for helping test the mod and shooting down all of my good ideas!
 Thanks to Mr. Highway for helping for making some sounds!
 
-Github - https://github.com/Nate7611/blowpipe-overhaul
+Github (Do not look at this code for help, it is not good...) - https://github.com/Nate7611/blowpipe-overhaul
+
+v0.2 - Huge balance overhaul, bug fixes, and new blowpipe
 
 v0.1.7 - Code optimization, removed ichor and cursed seeds, balance changes
 

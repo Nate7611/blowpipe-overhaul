@@ -21,8 +21,8 @@ namespace blowpipemod.Content.Projectiles.BlizzardBlowpipe
 
         public override void SetDefaults()
         {
-            Projectile.width = 128;
-            Projectile.height = 34;
+            Projectile.width = 67;
+            Projectile.height = 22;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = false;
             Projectile.extraUpdates = 1;
@@ -34,7 +34,7 @@ namespace blowpipemod.Content.Projectiles.BlizzardBlowpipe
 
             Player player = Main.player[Projectile.owner];
 
-            Projectile.Center = player.Center + new Vector2(0, -50);
+            Projectile.Center = player.Center + new Vector2(-3, -30);
 
             Projectile.frame = BlowpipePlayer.blizzardCounter;
 

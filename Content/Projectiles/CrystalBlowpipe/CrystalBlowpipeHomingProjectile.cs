@@ -39,18 +39,21 @@ namespace blowpipemod.Content.Projectiles.CrystalBlowpipe
         {
             if (Main.myPlayer == Projectile.owner)
             {
-                whichProjectile = Main.rand.Next(1, 4);
-                if (whichProjectile == 1)
+                if (Main.rand.NextBool(2))
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 5), ModContent.ProjectileType<CrystalBlowpipeFallingBallProjectile>(), Projectile.damage * 5, Projectile.knockBack, Main.myPlayer);
-                }
-                if (whichProjectile == 2)
-                {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 5), ModContent.ProjectileType<CrystalBlowpipeFallingSmallProjectile>(), Projectile.damage * 5, Projectile.knockBack, Main.myPlayer);
-                }
-                if (whichProjectile == 3)
-                {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 5), ModContent.ProjectileType<CrystalBlowpipeFallingLargeProjectile>(), Projectile.damage * 5, Projectile.knockBack, Main.myPlayer);
+                    whichProjectile = Main.rand.Next(1, 4);
+                    if (whichProjectile == 1)
+                    {
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 200), ModContent.ProjectileType<CrystalBlowpipeFallingBallProjectile>(), (int)(Projectile.damage * 2), Projectile.knockBack, Main.myPlayer);
+                    }
+                    if (whichProjectile == 2)
+                    {
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 200), ModContent.ProjectileType<CrystalBlowpipeFallingSmallProjectile>(), (int)(Projectile.damage * 2), Projectile.knockBack, Main.myPlayer);
+                    }
+                    if (whichProjectile == 3)
+                    {
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 200), ModContent.ProjectileType<CrystalBlowpipeFallingLargeProjectile>(), (int)(Projectile.damage * 2), Projectile.knockBack, Main.myPlayer);
+                    }
                 }
             }
         }
@@ -96,7 +99,7 @@ namespace blowpipemod.Content.Projectiles.CrystalBlowpipe
                 spriteUpdated = true;
             }
 
-            float maxDetectRadius = 100f;
+            float maxDetectRadius = 125f;
             float projSpeed = 15f;
 
             NPC closestNPC = FindClosestNPC(maxDetectRadius);

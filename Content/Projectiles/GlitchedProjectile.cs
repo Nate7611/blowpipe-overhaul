@@ -11,6 +11,7 @@ namespace blowpipemod.Content.Projectiles
         public int randomDust;
         public int spawnDust;
         public int spriteTimer;
+        public int lifespan = 0;
 
         public override void SetStaticDefaults()
         {
@@ -27,7 +28,6 @@ namespace blowpipemod.Content.Projectiles
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
-            Projectile.penetrate = Main.rand.Next(-1, 3);
             Projectile.light = 1;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
@@ -102,7 +102,12 @@ namespace blowpipemod.Content.Projectiles
 
         public override void AI()
         {
-            Projectile.netUpdate = true;
+            lifespan++;
+
+            if (lifespan >= 600)
+            {
+                Projectile.Kill();
+            }
 
             Projectile.position = Projectile.position + new Vector2(Main.rand.NextFloat(-2, 2), Main.rand.NextFloat(-2, 2));
             Projectile.velocity = Projectile.velocity + new Vector2(Main.rand.NextFloat(-2, 2), Main.rand.NextFloat(-2, 2));

@@ -35,15 +35,15 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
                 whichCrystal = Main.rand.Next(1, 4);
                 if (whichCrystal == 1 && Main.rand.NextBool(3))
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 5), ModContent.ProjectileType<CrystalBlowpipeFallingBallProjectile>(), Projectile.damage * 5, Projectile.knockBack, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 90), ModContent.ProjectileType<CrystalBlowpipeFallingBallProjectile>(), Projectile.damage * 5, Projectile.knockBack, Main.myPlayer);
                 }
                 if (whichCrystal == 2)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 5), ModContent.ProjectileType<CrystalBlowpipeFallingSmallProjectile>(), Projectile.damage * 5, Projectile.knockBack, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 95), ModContent.ProjectileType<CrystalBlowpipeFallingSmallProjectile>(), Projectile.damage * 5, Projectile.knockBack, Main.myPlayer);
                 }
                 if (whichCrystal == 3)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 5), ModContent.ProjectileType<CrystalBlowpipeFallingLargeProjectile>(), Projectile.damage * 5, Projectile.knockBack, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center + new Vector2(Main.rand.Next(-60, 61), Main.rand.Next(-400, -349)), Projectile.velocity * 0 + new Vector2(0, 100), ModContent.ProjectileType<CrystalBlowpipeFallingLargeProjectile>(), Projectile.damage * 5, Projectile.knockBack, Main.myPlayer);
                 }
 
                 if (Main.rand.NextBool(12))

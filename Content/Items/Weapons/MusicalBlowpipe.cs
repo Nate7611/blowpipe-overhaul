@@ -26,7 +26,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 10;
             Item.useTime = 10;
             Item.useAnimation = 90;
-            Item.damage = 55;
+            Item.damage = 36;
             Item.knockBack = 2f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -59,9 +59,9 @@ namespace blowpipemod.Content.Items.Weapons
                     type = ModContent.ProjectileType<EighthNote>();
                 }
             }
-            else if (type == ProjectileID.IchorDart | type == ProjectileID.CrystalDart)
+            else if (type == ProjectileID.IchorDart || type == ProjectileID.CrystalDart || type == ProjectileID.CursedDart || type == ProjectileID.PoisonDart)
             {
-                damage = (int)(damage * (1.00 - .25));
+                damage = (int)(damage * (1.00 - .55));
             }
         }
 

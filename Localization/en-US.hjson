@@ -10,7 +10,7 @@ Mods: {
 				DisplayName: Cursed Seed
 				Tooltip:
 					'''
-					Moves increadibly fast
+					Moves incredibly fast
 					[c/60F802:(At the moment I recommend using cursed darts as they are more unique and better)]
 					[c/60F802:(I will hopefully rework these seeds soon...)]
 					'''
@@ -31,7 +31,7 @@ Mods: {
 				Tooltip:
 					'''
 					Decreases target's defense
-					Moves increadibly fast
+					Moves incredibly fast
 					[c/FECA50:(At the moment I recommend using ichor darts as they are more unique and better)]
 					[c/FECA50:(I will hopefully rework these seeds soon...)]
 					'''
@@ -50,7 +50,7 @@ Mods: {
 				DisplayName: Shroomite Helm
 				Tooltip:
 					'''
-					15% increased seed damage
+					15% increased seed and dart damage
 					5% increased ranged critical strike chance
 					'''
 			}
@@ -69,7 +69,7 @@ Mods: {
 				Tooltip:
 					'''
 					Allows the collection of many seeds for ammo
-					Every fourth shot will shoot a seed that heal's you on impact
+					Every eighth shot will shoot a seed that heal's you on impact
 					'''
 			}
 
@@ -79,8 +79,7 @@ Mods: {
 					'''
 					Allows the collection of many seeds for ammo
 					Converts normal seeds into homing crystal seeds which rain piercing crystals on enemies heads
-					Using ichor and crystal darts reduce this weapons damage by 45%
-					60% chance not to consume ammo
+					70% chance not to consume ammo
 					'''
 			}
 
@@ -126,8 +125,7 @@ Mods: {
 				Tooltip:
 					'''
 					Allows the collection of many seeds for ammo
-					Converts normal seeds to fiery seeds which inflicts Hellfire and moves faster
-					While in the underworld, fiery seeds get +1 peirce
+					Converts normal seeds to fiery seeds which inflicts Hellfire, moves faster, and pierce
 					'''
 			}
 
@@ -236,10 +234,10 @@ Mods: {
 				Tooltip:
 					'''
 					Allows the collection of many seeds for ammo
-					Every 5 seconds a vortex orb will spawn above your head
+					Every few seconds a vortex orb will spawn above your head
 					Up to 3 vortex orbs can be attached to you at the same time
 					Right click to explode the vortex orbs into many very powerful homing seeds
-					Right clicking will put a 5 second cooldown on orb generation
+					Right clicking will put a cooldown on orb generation
 
 					'''
 			}

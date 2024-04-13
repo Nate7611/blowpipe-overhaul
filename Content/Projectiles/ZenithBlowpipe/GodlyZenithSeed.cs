@@ -10,6 +10,8 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
 {
     public class GodlyZenithSeed : ModProjectile
     {
+        int lifeSpan = 0;
+
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
@@ -26,6 +28,7 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
             Projectile.timeLeft = 360;
+            Projectile.light = 1f;
 
             AIType = ProjectileID.Seed;
         }
@@ -34,6 +37,17 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
         {
             float maxDetectRadius = 600f;
             float projSpeed = 15f;
+
+            lifeSpan++;
+
+            if (lifeSpan >= 300)
+            {
+                for (int d = 0; d < 4; d++)
+                {
+                    Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Vortex, 0f, 0f, 0, default(Color), 1.2f);
+                }
+                Projectile.Kill();
+            }
 
             NPC closestNPC = FindClosestNPC(maxDetectRadius);
             if (closestNPC == null) return;

@@ -1,3 +1,4 @@
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -17,9 +18,9 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 38;
             Item.height = 8;
-            Item.useTime = 25;
-            Item.useAnimation = 25;
-            Item.damage = 12;
+            Item.useTime = 28;
+            Item.useAnimation = 28;
+            Item.damage = 15;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -31,6 +32,14 @@ namespace blowpipemod.Content.Items.Weapons
             Item.shoot = ProjectileID.PurificationPowder;
             Item.noMelee = true;
             Item.autoReuse = true;
+        }
+
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+        {
+            if (type == ProjectileID.IchorDart || type == ProjectileID.CrystalDart || type == ProjectileID.CursedDart || type == ProjectileID.PoisonDartBlowgun)
+            {
+                damage = (int)(damage * (1.00 - 0.27));
+            }
         }
 
         public override void UpdateInventory(Player player)

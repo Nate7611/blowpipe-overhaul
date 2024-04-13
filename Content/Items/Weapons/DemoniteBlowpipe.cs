@@ -22,9 +22,9 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 38;
             Item.height = 12;
-            Item.useTime = 18;
-            Item.useAnimation = 18;
-            Item.damage = 24;
+            Item.useTime = 27;
+            Item.useAnimation = 27;
+            Item.damage = 15;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -51,6 +51,11 @@ namespace blowpipemod.Content.Items.Weapons
                 type = ModContent.ProjectileType<DemoniteBlowpipeProjectile>();
                 damage *= 2;
                 shotTracker = 0;
+            }
+
+            if (type == ProjectileID.IchorDart || type == ProjectileID.CrystalDart || type == ProjectileID.CursedDart || type == ProjectileID.PoisonDartBlowgun)
+            {
+                damage = (int)(damage * (1.00 - 0.27));
             }
         }
 

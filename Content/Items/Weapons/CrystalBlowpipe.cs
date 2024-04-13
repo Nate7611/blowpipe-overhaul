@@ -19,9 +19,9 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 38;
             Item.height = 14;
-            Item.useTime = 5;
-            Item.useAnimation = 5;
-            Item.damage = 13;
+            Item.useTime = 4;
+            Item.useAnimation = 4;
+            Item.damage = 12;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -41,15 +41,15 @@ namespace blowpipemod.Content.Items.Weapons
             {
                 type = ModContent.ProjectileType<CrystalBlowpipeHomingProjectile>();
             }
-            else if (type == ProjectileID.IchorDart | type == ProjectileID.CrystalDart)
+            else if (type == ProjectileID.IchorDart || type == ProjectileID.CrystalDart || type == ProjectileID.CursedDart || type == ProjectileID.PoisonDartBlowgun)
             {
-                damage = (int)(damage * (1.00 - .45));
+                damage = (int)(damage * (1.00 - 0.58));
             }
         }
 
         public override bool CanConsumeAmmo(Item ammo, Player player)
         {
-            return Main.rand.NextFloat() >= .60f;
+            return Main.rand.NextFloat() >= .70f;
         }
 
         public override void UpdateInventory(Player player)

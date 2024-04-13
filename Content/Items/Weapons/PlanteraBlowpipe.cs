@@ -25,7 +25,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 18;
             Item.useTime = 25;
             Item.useAnimation = 25;
-            Item.damage = 100;
+            Item.damage = 80;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -41,7 +41,7 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if (type == ProjectileID.Seed)
+            if (type == ModContent.ProjectileType<VinySeed>())
             {
                 type = ModContent.ProjectileType<VinySeed>();
             }
@@ -51,7 +51,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             planteraShotTracker++;
 
-            if (planteraShotTracker == 7)
+            if (planteraShotTracker >= 16)
             {
                 planteraShotTracker = 1;
             }

@@ -35,21 +35,21 @@ namespace blowpipemod.Content.Projectiles
         {
             if (Main.myPlayer == Projectile.owner)
             {
-                if (Main.rand.NextBool(2))
-                {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), Projectile.damage / 4, 0, Main.myPlayer);
-                }
                 if (Main.rand.NextBool(3))
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), Projectile.damage / 4, 0, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), (int)(Projectile.damage / 4), 0, Main.myPlayer);
                 }
                 if (Main.rand.NextBool(4))
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), Projectile.damage / 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), (int)(Projectile.damage / 3), 0, Main.myPlayer);
                 }
                 if (Main.rand.NextBool(5))
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), Projectile.damage / 3, 0, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), (int)(Projectile.damage / 2), 0, Main.myPlayer);
+                }
+                if (Main.rand.NextBool(5))
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<FragileSeedSegment>(), (int)(Projectile.damage / 1), 0, Main.myPlayer);
                 }
             }
         }

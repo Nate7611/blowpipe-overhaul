@@ -44,6 +44,18 @@ namespace blowpipemod.Content.Projectiles.BlizzardBlowpipe
             return false;
         }
 
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            SoundEngine.PlaySound(SoundID.DD2_WitherBeastCrystalImpact, Projectile.position);
+
+            for (int d = 0; d < 7; d++)
+            {
+                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 0, default(Color), 0.8f);
+            }
+
+            Projectile.Kill();
+        }
+
         public override void AI()
         {
             if (Projectile.ai[0] == 0)

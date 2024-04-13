@@ -21,9 +21,9 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 38;
             Item.height = 12;
-            Item.useTime = 60;
-            Item.useAnimation = 60;
-            Item.damage = 200;
+            Item.useTime = 40;
+            Item.useAnimation = 40;
+            Item.damage = 72;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -39,7 +39,7 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if (type == ProjectileID.Seed)
+            if (type != ModContent.ProjectileType<BlizzardSeedProjectile>())
             {
                 type = ModContent.ProjectileType<BlizzardSeedProjectile>();
             }
@@ -59,9 +59,9 @@ namespace blowpipemod.Content.Items.Weapons
 
             if (BlowpipePlayer.blizzardCounter == 5 && Main.myPlayer == player.whoAmI)
             {
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 15; i++)
                 {
-                    Projectile.NewProjectile(new EntitySource_Parent(player), Main.MouseWorld + new Vector2(Main.rand.Next(-150,151), -350 + Main.rand.Next(-10, 151)), new Vector2(0, 0), ModContent.ProjectileType<IceSpike>(), 150, 0, Main.myPlayer);
+                    Projectile.NewProjectile(new EntitySource_Parent(player), Main.MouseWorld + new Vector2(Main.rand.Next(-150,151), -350 + Main.rand.Next(-10, 151)), new Vector2(0, 0), ModContent.ProjectileType<IceSpike>(), 55, 0, Main.myPlayer);
                 }
 
                 BlowpipePlayer.blizzardCounter = 0;

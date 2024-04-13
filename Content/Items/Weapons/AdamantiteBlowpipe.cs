@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -19,9 +20,9 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 39;
             Item.height = 32;
-            Item.useTime = 21;
-            Item.useAnimation = 21;
-            Item.damage = 38;
+            Item.useTime = 32;
+            Item.useAnimation = 32;
+            Item.damage = 33;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -37,6 +38,11 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
+            if (type == ProjectileID.IchorDart || type == ProjectileID.CrystalDart || type == ProjectileID.CursedDart || type == ProjectileID.PoisonDartBlowgun)
+            {
+                damage = (int)(damage * (1.00 - 0.58));
+            }
+
             Vector2 source = player.RotatedRelativePoint(player.MountedCenter, false, true);
             float piOver2 = (float)Math.PI / 2f;
             Vector2 offset = Utils.RotatedBy(velocity, (double)piOver2, default(Vector2));

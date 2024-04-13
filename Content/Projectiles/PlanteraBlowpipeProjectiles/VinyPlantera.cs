@@ -42,8 +42,6 @@ namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
         {
             chargeTimer++;
 
-            Projectile.netUpdate = true;
-
             if (++Projectile.frameCounter >= 15)
             {
                 Projectile.frameCounter = 0;
@@ -78,17 +76,6 @@ namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
             {
                 Projectile.rotation += 0.5f;
                 Projectile.friendly = false;
-            }
-        }
-
-        public override void Kill(int timeLeft)
-        {
-            SoundEngine.PlaySound(SoundID.NPCDeath3, Projectile.position);
-
-            for (int d = 0; d < 15; d++)
-            {
-                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Plantera_Pink, 0f, 0f, 0, default(Color), 1.5f);
-                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Plantera_Green, 0f, 0f, 0, default(Color), 1.5f);
             }
         }
     }

@@ -18,7 +18,7 @@ namespace blowpipemod.Content.Items.Weapons
         {
             Item.DamageType = DamageClass.Ranged;
             Item.width = 38;
-            Item.height = 12;
+            Item.height = 8;
             Item.useTime = 23;
             Item.useAnimation = 23;
             Item.damage = 13;
@@ -40,6 +40,10 @@ namespace blowpipemod.Content.Items.Weapons
             if (type == ProjectileID.Seed)
             {
                 type = ModContent.ProjectileType<IceSeedProjectile>();
+            }
+            else if (type == ProjectileID.IchorDart || type == ProjectileID.CrystalDart || type == ProjectileID.CursedDart || type == ProjectileID.PoisonDartBlowgun)
+            {
+                damage = (int)(damage * (1.00 - 0.27));
             }
         }
 

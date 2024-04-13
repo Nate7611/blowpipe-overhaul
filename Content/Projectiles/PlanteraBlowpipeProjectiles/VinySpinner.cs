@@ -57,7 +57,7 @@ namespace blowpipemod.Content.Projectiles.PlanteraBlowpipeProjectiles
                 Projectile.Center = Main.MouseWorld;
             }
 
-            if (vineLifespan >= 360)
+            if (vineLifespan >= 240)
             {
                 Projectile.Kill();
             }

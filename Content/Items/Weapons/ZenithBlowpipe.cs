@@ -35,9 +35,9 @@ namespace blowpipemod.Content.Items.Weapons
             Item.DamageType = DamageClass.Ranged;
             Item.width = 66;
             Item.height = 16;
-            Item.useTime = 22;
-            Item.useAnimation = 22;
-            Item.damage = 400;
+            Item.useTime = 21;
+            Item.useAnimation = 21;
+            Item.damage = 258;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -57,7 +57,7 @@ namespace blowpipemod.Content.Items.Weapons
 
             if (jungleShotTracker == 12 && Main.myPlayer == player.whoAmI)
             {
-                Projectile.NewProjectile(source, Main.MouseWorld + new Vector2(0, -75), velocity * 0, ModContent.ProjectileType<ZenithJungleOrb>(), damage * 5, knockback * 0, player.whoAmI);
+                Projectile.NewProjectile(source, Main.MouseWorld + new Vector2(0, -75), velocity * 0, ModContent.ProjectileType<ZenithJungleOrb>(), damage * 3, knockback * 0, player.whoAmI);
                 jungleShotTracker = 0;
             }
 

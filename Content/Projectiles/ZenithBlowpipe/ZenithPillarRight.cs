@@ -27,6 +27,7 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
             Projectile.timeLeft = 18000;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.penetrate = 1;
+            Projectile.light = 1f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = false;
         }
@@ -61,7 +62,7 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
                 {
                     for (int i = 0; i < 50; i++)
                     {
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center + new Vector2(Main.rand.Next(-30, 31), Main.rand.Next(-30, 31)), new Vector2(Main.rand.NextFloat(-1, 1), Main.rand.NextFloat(-1, 1)), ModContent.ProjectileType<GodlyZenithSeed>(), 120, 0, Main.myPlayer);
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center + new Vector2(Main.rand.Next(-30, 31), Main.rand.Next(-30, 31)), new Vector2(Main.rand.NextFloat(-1, 1), Main.rand.NextFloat(-1, 1)), ModContent.ProjectileType<GodlyZenithSeed>(), 35, 0, Main.myPlayer);
                     }
                     SoundEngine.PlaySound(SoundID.DD2_ExplosiveTrapExplode, Projectile.position);
                     Projectile.Kill();

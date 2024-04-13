@@ -10,6 +10,8 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipeProjectiles
 {
     public class GodlyVortexSeed : ModProjectile
     {
+        int lifeSpan = 0;
+
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
@@ -23,6 +25,7 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipeProjectiles
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.friendly = true;
             Projectile.hostile = false;
+            Projectile.light = 1f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
             Projectile.timeLeft = 1200;
@@ -34,6 +37,17 @@ namespace blowpipemod.Content.Projectiles.VortexBlowpipeProjectiles
         {
             float maxDetectRadius = 600f;
             float projSpeed = 15f;
+
+            lifeSpan++;
+
+            if (lifeSpan >= 300)
+            {
+                for (int d = 0; d < 4; d++)
+                {
+                    Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Vortex, 0f, 0f, 0, default(Color), 1.2f);
+                }
+                Projectile.Kill();
+            }
 
             NPC closestNPC = FindClosestNPC(maxDetectRadius);
             if (closestNPC == null) return;

@@ -25,7 +25,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 12;
             Item.useTime = 15;
             Item.useAnimation = 15;
-            Item.damage = 165;
+            Item.damage = 140;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -39,11 +39,19 @@ namespace blowpipemod.Content.Items.Weapons
             Item.autoReuse = true;
         }
 
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+        {
+            if (type == ProjectileID.IchorDart || type == ProjectileID.CrystalDart || type == ProjectileID.CursedDart || type == ProjectileID.PoisonDartBlowgun)
+            {
+                damage = (int)(damage * (1.00 - 0.58));
+            }
+        }
+
         public override void HoldItem(Player player)
         {
             pillarTimer++;
 
-            if (pillarTimer == 300 && Main.myPlayer == player.whoAmI)
+            if (pillarTimer == 240 && Main.myPlayer == player.whoAmI)
             {
                 pillarCount++;
 

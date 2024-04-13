@@ -9,6 +9,7 @@ namespace blowpipemod.Content.Projectiles.CrystalBlowpipe
     public class CrystalBlowpipeFallingSmallProjectile : ModProjectile
     {
         public bool spriteUpdated = false;
+        public int lifeTimer = 0;
 
         public override void SetStaticDefaults()
         {
@@ -26,45 +27,11 @@ namespace blowpipemod.Content.Projectiles.CrystalBlowpipe
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.light = 1f;
-            Projectile.penetrate = 2;
-            Projectile.ignoreWater = false;
-            Projectile.tileCollide = true;
-            Projectile.extraUpdates = 1;
+            Projectile.penetrate = 1;
+            Projectile.ignoreWater = true;
+            Projectile.tileCollide = false;
 
-            AIType = ProjectileID.Seed;
-        }
-
-        public override bool OnTileCollide(Vector2 oldVelocity)
-        {
-            SoundEngine.PlaySound(SoundID.DD2_WitherBeastCrystalImpact, Projectile.position);
-
-            if (Projectile.frame == 0)
-            {
-                for (int d = 0; d < 7; d++)
-                {
-                    Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 0, default(Color), 0.8f);
-                }
-            }
-
-            if (Projectile.frame == 1)
-            {
-                for (int d = 0; d < 7; d++)
-                {
-                    Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.PinkCrystalShard, 0f, 0f, 0, default(Color), 0.8f);
-                }
-            }
-
-            if (Projectile.frame == 2)
-            {
-                for (int d = 0; d < 7; d++)
-                {
-                    Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.PurpleCrystalShard, 0f, 0f, 0, default(Color), 0.8f);
-                }
-            }
-
-            Projectile.Kill();
-
-            return true;
+            Projectile.ai[0] = 0;
         }
 
         public override void AI()
@@ -73,6 +40,68 @@ namespace blowpipemod.Content.Projectiles.CrystalBlowpipe
             {
                 Projectile.frame = Main.rand.Next(0, 3);
                 spriteUpdated = true;
+            }
+
+            lifeTimer++;
+
+            if (lifeTimer >= 300f)
+            {
+                SoundEngine.PlaySound(SoundID.DD2_WitherBeastCrystalImpact, Projectile.position);
+
+                if (Projectile.frame == 0)
+                {
+                    for (int d = 0; d < 7; d++)
+                    {
+                        Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 0, default(Color), 0.9f);
+                    }
+                }
+
+                if (Projectile.frame == 1)
+                {
+                    for (int d = 0; d < 7; d++)
+                    {
+                        Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.PinkCrystalShard, 0f, 0f, 0, default(Color), 0.9f);
+                    }
+                }
+
+                if (Projectile.frame == 2)
+                {
+                    for (int d = 0; d < 7; d++)
+                    {
+                        Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.PurpleCrystalShard, 0f, 0f, 0, default(Color), 0.9f);
+                    }
+                }
+
+                Projectile.Kill();
+            }
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            SoundEngine.PlaySound(SoundID.DD2_WitherBeastCrystalImpact, Projectile.position);
+
+            if (Projectile.frame == 0)
+            {
+                for (int d = 0; d < 7; d++)
+                {
+                    Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.BlueCrystalShard, 0f, 0f, 0, default(Color), 0.9f);
+                }
+            }
+
+            if (Projectile.frame == 1)
+            {
+                for (int d = 0; d < 7; d++)
+                {
+                    Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.PinkCrystalShard, 0f, 0f, 0, default(Color), 0.9f);
+                }
+            }
+
+            if (Projectile.frame == 2)
+            {
+                for (int d = 0; d < 7; d++)
+                {
+                    Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.PurpleCrystalShard, 0f, 0f, 0, default(Color), 0.9f);
+                }
             }
         }
     }

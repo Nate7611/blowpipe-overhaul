@@ -25,7 +25,7 @@ namespace blowpipemod.Content.Projectiles
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.light = 1f;
-            Projectile.penetrate = 1;
+            Projectile.penetrate = -1;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
             Projectile.extraUpdates = 1;
@@ -35,23 +35,12 @@ namespace blowpipemod.Content.Projectiles
 
         public override void AI()
         {
-            Player player = Main.player[Projectile.owner];
-
-            if (player.ZoneUnderworldHeight)
-            {
-                Projectile.penetrate = 2;
-            }
-            else
-            {
-                Projectile.penetrate = 1;
-            }
-
             Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 0, default(Color), 1.0f);
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (Main.rand.NextBool(12))
+            if (Main.rand.NextBool(8))
             {
                 target.AddBuff(BuffID.OnFire3, 120);
             }

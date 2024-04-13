@@ -12,7 +12,7 @@ namespace blowpipemod.Content.Items.Weapons
     {
         public static int astralCount;
         private int summonTimer;
-        private int coolDown = 1200;
+        private int coolDown = 800;
         private bool usedM2 = false;
         private bool soundPlayed = false;
 
@@ -28,7 +28,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.height = 12;
             Item.useTime = 22;
             Item.useAnimation = 22;
-            Item.damage = 92;
+            Item.damage = 54;
             Item.knockBack = 3.5f;
             Item.crit = 0;
             Item.useAmmo = AmmoID.Dart;
@@ -44,9 +44,9 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if (type == ProjectileID.IchorDart | type == ProjectileID.CrystalDart)
+            if (type == ProjectileID.CursedDart || type == ProjectileID.CrystalDart || type == ProjectileID.IchorDart || type == ProjectileID.PoisonDartBlowgun)
             {
-                damage = (int)(damage * (1.00 - .25));
+                damage = (int)(damage * (1 - 0.55));
             }
         }
 
@@ -58,19 +58,19 @@ namespace blowpipemod.Content.Items.Weapons
 
                 if (astralCount == 0)
                 {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(0, -50), new Vector2(0, 0), ModContent.ProjectileType<SpawnedAstralBlowpipe>(), 100, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(0, -50), new Vector2(0, 0), ModContent.ProjectileType<SpawnedAstralBlowpipe>(), 0, 0, Main.myPlayer);
                     astralCount++;
                 }
 
                 if (astralCount == 1)
                 {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(50, 0), new Vector2(0, 0), ModContent.ProjectileType<SpawnedAstralBlowpipe>(), 100, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(50, 0), new Vector2(0, 0), ModContent.ProjectileType<SpawnedAstralBlowpipe>(), 0, 0, Main.myPlayer);
                     astralCount++;
                 }
 
                 if (astralCount == 2)
                 {
-                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<SpawnedAstralBlowpipe>(), 100, 0, Main.myPlayer);
+                    Projectile.NewProjectile(player.GetSource_ItemUse_WithPotentialAmmo(player.HeldItem, AmmoID.Dart), player.Center + new Vector2(-50, 0), new Vector2(0, 0), ModContent.ProjectileType<SpawnedAstralBlowpipe>(), 0, 0, Main.myPlayer);
                     astralCount = 0;
                 }
 
@@ -104,7 +104,7 @@ namespace blowpipemod.Content.Items.Weapons
                 {
                     SoundEngine.PlaySound(SoundID.Dig, player.position);
                     usedM2 = false;
-                    coolDown = 1200;
+                    coolDown = 800;
                 }
             }
 
