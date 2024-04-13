@@ -75,13 +75,12 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient(ItemID.Blowpipe)
-                .AddIngredient(ItemID.SnowBlock, 25)
-                .AddIngredient(ItemID.IceBlock, 25)
-                .AddIngredient(ItemID.IceTorch, 5)
-                .AddTile(TileID.Anvils)
-                .Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ModContent.ItemType<IceBlowpipe>());
+            recipe.AddIngredient(ItemID.FrostCore, 1);
+            recipe.AddIngredient(ItemID.HallowedBar, 12);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
         }
     }
 }
