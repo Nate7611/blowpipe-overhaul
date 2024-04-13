@@ -29,7 +29,7 @@ namespace blowpipemod.Content.Items.Weapons
             Item.useAmmo = AmmoID.Dart;
             Item.shootSpeed = 15f;
             Item.value = Item.buyPrice(silver: 40);
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = ItemRarityID.Pink;
             Item.UseSound = SoundID.Item63;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.shoot = ProjectileID.PurificationPowder;

@@ -21,7 +21,7 @@ Thanks to Mr. Highway for helping for making some sounds!
 Github (Do not look at this code for help, it is not good...) - https://github.com/Nate7611/blowpipe-overhaul
 
 
-v0.2.1 - Fix recipe for blizzard blowpipe
+v0.2.1 - Fix recipe for blizzard blowpipe and fix some rarity colors
 
 v0.2 - Huge balance overhaul, bug fixes, and new blowpipe
 
