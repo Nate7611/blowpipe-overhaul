@@ -270,7 +270,12 @@ Mods: {
 
 			BlizzardBlowpipe: {
 				DisplayName: Blizzard Blowpipe
-				Tooltip: Slow fire rate but high damage
+				Tooltip: 
+				'''
+				Converts seeds into fast moving ice seeds
+				Hitting five ice seeds rains ice shards onto your cursor
+				Missing a shot reduces your charge
+				'''
 			}
 		}
 

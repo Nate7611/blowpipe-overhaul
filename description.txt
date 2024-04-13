@@ -20,6 +20,9 @@ Thanks to Mr. Highway for helping for making some sounds!
 
 Github (Do not look at this code for help, it is not good...) - https://github.com/Nate7611/blowpipe-overhaul
 
+
+v0.2.1 - Fix recipe for blizzard blowpipe
+
 v0.2 - Huge balance overhaul, bug fixes, and new blowpipe
 
 v0.1.7 - Code optimization, removed ichor and cursed seeds, balance changes
