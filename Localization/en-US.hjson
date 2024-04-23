@@ -270,12 +270,12 @@ Mods: {
 
 			BlizzardBlowpipe: {
 				DisplayName: Blizzard Blowpipe
-				Tooltip: 
-				'''
-				Converts seeds into fast moving ice seeds
-				Hitting five ice seeds rains ice shards onto your cursor
-				Missing a shot reduces your charge
-				'''
+				Tooltip:
+					'''
+					Converts seeds into fast moving ice seeds
+					Hitting five ice seeds rains ice shards onto your cursor
+					Missing a shot reduces your charge
+					'''
 			}
 		}
 

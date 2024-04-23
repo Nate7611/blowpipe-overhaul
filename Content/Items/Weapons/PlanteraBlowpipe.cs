@@ -41,7 +41,7 @@ namespace blowpipemod.Content.Items.Weapons
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if (type == ModContent.ProjectileType<VinySeed>())
+            if (type != ModContent.ProjectileType<VinySeed>())
             {
                 type = ModContent.ProjectileType<VinySeed>();
             }
