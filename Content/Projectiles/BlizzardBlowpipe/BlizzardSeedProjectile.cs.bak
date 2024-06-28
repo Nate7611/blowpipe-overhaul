@@ -6,9 +6,9 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles
+namespace blowpipemod.Content.Projectiles.BlizzardBlowpipe
 {
-    public class HardenedSeedProjectile : ModProjectile
+    public class BlizzardSeedProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -24,11 +24,33 @@ namespace blowpipemod.Content.Projectiles
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
+            Projectile.light = 1f;
             Projectile.penetrate = 1;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
+            Projectile.extraUpdates = 2;
 
             AIType = ProjectileID.Seed;
+        }
+
+        public override void AI()
+        {
+            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, 0f, 0f, 0, default(Color), 1.0f);
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            if (BlowpipePlayer.blizzardCounter < 5)
+            {
+                BlowpipePlayer.blizzardCounter++;
+            }
+        }
+
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            BlowpipePlayer.blizzardCounter -= 1;
+
+            return true;
         }
 
         public override bool PreDraw(ref Color lightColor)
@@ -47,7 +69,7 @@ namespace blowpipemod.Content.Projectiles
             return true;
         }
 
-        public override void OnKill(int timeLeft)
+        public override void Kill(int timeLeft)
         {
             Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
             SoundEngine.PlaySound(SoundID.Item10, Projectile.position);

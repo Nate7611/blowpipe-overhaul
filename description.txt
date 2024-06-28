@@ -20,6 +20,8 @@ Thanks to Mr. Highway for helping for making some sounds!
 
 Github (Do not look at this code for help, it is not good...) - https://github.com/Nate7611/blowpipe-overhaul
 
+v0.2.3 - Update for new version and fix plantera blowpipe for real this time (I hope) 
+
 v0.2.2 - Fix plantera blowpipe not working
 
 v0.2.1 - Fix recipe for blizzard blowpipe and fix some rarity colors

@@ -201,7 +201,7 @@ Mods: {
 				Tooltip:
 					'''
 					Allows the collection of many seeds for ammo
-					[c/E180CE:Converts normal seeds into viny seeds which unleash Plantera's arsenal]
+					[c/E180CE:Converts normal seeds into viny seeds which cycles through Plantera's arsenal on hit]
 					'''
 			}
 

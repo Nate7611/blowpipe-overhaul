@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace blowpipemod.Content.Projectiles
 {
-    public class HardenedSeedProjectile : ModProjectile
+    public class IceSeedProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -25,10 +25,24 @@ namespace blowpipemod.Content.Projectiles
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.penetrate = 1;
+            Projectile.light = 1f;
             Projectile.ignoreWater = false;
             Projectile.tileCollide = true;
 
             AIType = ProjectileID.Seed;
+        }
+
+        public override void AI()
+        {
+            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.IceTorch, 0f, 0f, 0, default(Color), 1.0f);
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            if (Main.rand.NextBool(10))
+            {
+                target.AddBuff(BuffID.Frostburn, 120, false);
+            }
         }
 
         public override bool PreDraw(ref Color lightColor)
@@ -47,7 +61,7 @@ namespace blowpipemod.Content.Projectiles
             return true;
         }
 
-        public override void OnKill(int timeLeft)
+        public override void Kill(int timeLeft)
         {
             Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
             SoundEngine.PlaySound(SoundID.Item10, Projectile.position);

@@ -75,7 +75,7 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
             return closestNPC;
         }
 
-        public override void OnKill(int timeLeft)
+        public override void Kill(int timeLeft)
         {
             for (int d = 0; d < 10; d++)
             {

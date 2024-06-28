@@ -1,4 +1,3 @@
-using blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,9 +6,9 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
+namespace blowpipemod.Content.Projectiles.HallowedBlowpipeProjectiles
 {
-    public class ZenithAstralSeed : ModProjectile
+    public class AstralSeed : ModProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -34,7 +33,7 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
         {
             if (Main.myPlayer == Projectile.owner)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<Explosion>(), Projectile.damage * 2, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), target.Center, Projectile.velocity * 0, ModContent.ProjectileType<Explosion>(), Projectile.damage, 0, Main.myPlayer);
             }
             for (int d = 0; d < 15; d++)
             {
@@ -45,8 +44,8 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
 
         public override void AI()
         {
-            float maxDetectRadius = 220f;
-            float projSpeed = 22f;
+            float maxDetectRadius = 200f;
+            float projSpeed = 15f;
 
             NPC closestNPC = FindClosestNPC(maxDetectRadius);
             if (closestNPC == null) return;
@@ -96,7 +95,7 @@ namespace blowpipemod.Content.Projectiles.ZenithBlowpipe
             return true;
         }
 
-        public override void OnKill(int timeLeft)
+        public override void Kill(int timeLeft)
         {
             Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
             SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
